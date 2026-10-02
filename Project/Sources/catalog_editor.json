@@ -1,0 +1,158 @@
+{
+	"tables": {
+		"Table_4": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			},
+			"coordinates": {
+				"left": "834.3359375",
+				"top": "156.10546875",
+				"width": "120",
+				"height": "167.33203125"
+			},
+			"displayable_fields_count": 6
+		},
+		"Table_3": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			},
+			"coordinates": {
+				"left": "562.08203125",
+				"top": "71.984375",
+				"width": "191.71875",
+				"height": "200.40234375"
+			},
+			"displayable_fields_count": 7
+		},
+		"Table_2": {
+			"color": {
+				"red": "237",
+				"green": "211",
+				"blue": "181",
+				"alpha": "255"
+			},
+			"coordinates": {
+				"left": "294.3515625",
+				"top": "71.48046875",
+				"width": "208.125",
+				"height": "367.19921875"
+			},
+			"displayable_fields_count": 15,
+			"fields": {
+				"T2Champ_real": {
+					"color": {
+						"red": "0",
+						"green": "81",
+						"blue": "186",
+						"alpha": "255"
+					}
+				},
+				"T2Champ_longint": {
+					"color": {
+						"red": "102",
+						"green": "7",
+						"blue": "165",
+						"alpha": "255"
+					}
+				}
+			}
+		},
+		"Table_1": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			},
+			"coordinates": {
+				"left": "62.46484375",
+				"top": "70.86328125",
+				"width": "152.63671875",
+				"height": "355.58203125"
+			},
+			"displayable_fields_count": 14,
+			"fields": {
+				"Champ_blob": {
+					"color": {
+						"red": "216",
+						"green": "30",
+						"blue": "5",
+						"alpha": "255"
+					}
+				},
+				"Champ_int": {
+					"color": {
+						"red": "0",
+						"green": "158",
+						"blue": "96",
+						"alpha": "255"
+					}
+				},
+				"Champ_date": {
+					"color": {
+						"red": "102",
+						"green": "7",
+						"blue": "165",
+						"alpha": "255"
+					}
+				}
+			}
+		}
+	},
+	"relations": {
+		"C6925AC053CE449799B67A4B6F2925EA": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		},
+		"3DEF1E7CDB4B4C9A8ED618CA048600A5": {
+			"color": {
+				"red": "181",
+				"green": "145",
+				"blue": "209",
+				"alpha": "255"
+			}
+		},
+		"3733BE5AF4D74ACB8691FFC997A80050": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		},
+		"357A968E17B9491FBABC66A5F4856E5A": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		},
+		"84E19D84A0184E7FBA2C5C9CDB5689FF": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		},
+		"370180DABD8545D690CDC79E15D31215": {
+			"color": {
+				"red": "255",
+				"green": "255",
+				"blue": "255",
+				"alpha": "0"
+			}
+		}
+	}
+}
