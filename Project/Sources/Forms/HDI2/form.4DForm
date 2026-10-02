@@ -46,16 +46,24 @@
 					"dataSource": "vTabControl",
 					"dataSourceTypeHint": "arrayText",
 					"labels": [
-						"Info",
-						"Tables",
-						"Indexes",
-						"Relations",
-						"Extra"
+						":xliff:HDI2_TabInfo",
+						":xliff:HDI2_TabTables",
+						":xliff:HDI2_TabIndexes",
+						":xliff:HDI2_TabRelations",
+						":xliff:HDI2_TabExtra"
 					],
 					"action": "gotoPage",
 					"events": [
 						"onClick"
 					]
+				},
+				"refListColors": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 1,
+					"height": 1,
+					"class": "ref-list-colors"
 				}
 			}
 		},
@@ -66,39 +74,39 @@
 					"top": 178,
 					"left": 772,
 					"width": 280,
-					"height": 22,
-					"text": "XML structure",
+					"text": ":xliff:HDI2_Button",
 					"focusable": false,
 					"method": "ObjectMethods/Button.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "default"
 				},
 				"Button4": {
 					"type": "button",
 					"top": 254,
 					"left": 772,
 					"width": 280,
-					"height": 21,
-					"text": "Open \"getDatabaseStructure\" method",
+					"text": ":xliff:HDI2_Button4",
 					"focusable": false,
 					"method": "ObjectMethods/Button4.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "default"
 				},
 				"Button1": {
 					"type": "button",
 					"top": 383,
 					"left": 772,
 					"width": 280,
-					"height": 22,
-					"text": "JSON structure",
+					"text": ":xliff:HDI2_Button1",
 					"focusable": false,
 					"method": "ObjectMethods/Button1.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "default"
 				},
 				"Text": {
 					"type": "text",
@@ -107,7 +115,8 @@
 					"width": 1120,
 					"height": 65,
 					"fontWeight": "bold",
-					"text": "You can retrieve the information on the database structure with the EXPORT STRUCTURE command. The whole database structure definition is exported in XML tree. \r\rIn this example:\r"
+					"text": ":xliff:HDI2_Text",
+					"stroke": "automatic"
 				},
 				"Text23": {
 					"type": "text",
@@ -116,7 +125,8 @@
 					"width": 560,
 					"height": 49,
 					"fontWeight": "bold",
-					"text": "We export the database structure in xml. Click on  \"XML structure\" button to see the xml tree. "
+					"text": ":xliff:HDI2_Text23",
+					"stroke": "automatic"
 				},
 				"Text24": {
 					"type": "text",
@@ -125,7 +135,8 @@
 					"width": 560,
 					"height": 113,
 					"fontWeight": "bold",
-					"text": "We parse the xml tree to retrieve:\r   * the table and field information\r   * the index information\r   * the relation information. \rClick on  \"Open getDatabaseStructure method\" button to see the code. "
+					"text": ":xliff:HDI2_Text24",
+					"stroke": "automatic"
 				},
 				"Text25": {
 					"type": "text",
@@ -134,7 +145,8 @@
 					"width": 560,
 					"height": 49,
 					"fontWeight": "bold",
-					"text": "We save the result in an object variable. Click on \"JSON structure\" button to see the exported object in JSON file."
+					"text": ":xliff:HDI2_Text25",
+					"stroke": "automatic"
 				},
 				"Text26": {
 					"type": "text",
@@ -143,7 +155,8 @@
 					"width": 560,
 					"height": 97,
 					"fontWeight": "bold",
-					"text": "We display the content of object in the other tabs:\r   * Tables\r   * Indexes\r   * Relations"
+					"text": ":xliff:HDI2_Text26",
+					"stroke": "automatic"
 				},
 				"Picture1": {
 					"type": "picture",
@@ -197,7 +210,8 @@
 					"width": 560,
 					"height": 97,
 					"fontWeight": "bold",
-					"text": "In the last \"Extra\" tab, we provide you two 4D methods to replace the 4D Pack commands:\r   * _AP Get table info\r   * _AP Get field info"
+					"text": ":xliff:HDI2_Text27",
+					"stroke": "automatic"
 				}
 			}
 		},
@@ -215,7 +229,8 @@
 					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_sql_schema_id": {
 					"type": "input",
@@ -229,7 +244,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_name": {
 					"type": "input",
@@ -243,7 +259,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_sql_schema_name": {
 					"type": "input",
@@ -257,7 +274,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_uuid": {
 					"type": "input",
@@ -271,7 +289,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"TableList": {
 					"type": "dropdown",
@@ -284,7 +303,8 @@
 					"method": "ObjectMethods/TableList.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_leave_tag_on_delete": {
 					"type": "checkbox",
@@ -292,11 +312,12 @@
 					"left": 560,
 					"width": 250,
 					"height": 19,
-					"text": "Leave tag on delete record",
+					"text": ":xliff:HDI2_Table_leave_tag_on_delete",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_trigger_insert": {
 					"type": "checkbox",
@@ -304,8 +325,9 @@
 					"left": 873,
 					"width": 250,
 					"height": 19,
-					"text": "Trigger: On saving new record",
-					"focusable": false
+					"text": ":xliff:HDI2_Table_trigger_insert",
+					"focusable": false,
+					"stroke": "automatic"
 				},
 				"Table_keep_record_sync_info": {
 					"type": "checkbox",
@@ -313,11 +335,12 @@
 					"left": 560,
 					"width": 250,
 					"height": 19,
-					"text": "Enable replication",
+					"text": ":xliff:HDI2_Table_keep_record_sync_info",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_trigger_delete": {
 					"type": "checkbox",
@@ -325,11 +348,12 @@
 					"left": 873,
 					"width": 250,
 					"height": 19,
-					"text": "Trigger: On deleting a record",
+					"text": ":xliff:HDI2_Table_trigger_delete",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_hide_in_REST": {
 					"type": "checkbox",
@@ -337,11 +361,12 @@
 					"left": 560,
 					"width": 250,
 					"height": 19,
-					"text": "Hide with 4D Mobile Service",
+					"text": ":xliff:HDI2_Table_hide_in_REST",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_trigger_update": {
 					"type": "checkbox",
@@ -349,11 +374,12 @@
 					"left": 873,
 					"width": 250,
 					"height": 19,
-					"text": "Trigger: On saving a existing record",
+					"text": ":xliff:HDI2_Table_trigger_update",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_prevent_journaling": {
 					"type": "checkbox",
@@ -361,11 +387,12 @@
 					"left": 560,
 					"width": 250,
 					"height": 19,
-					"text": "Exclude from journal file",
+					"text": ":xliff:HDI2_Table_prevent_journaling",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_trashed": {
 					"type": "checkbox",
@@ -373,11 +400,12 @@
 					"left": 873,
 					"width": 250,
 					"height": 19,
-					"text": "Trashed",
+					"text": ":xliff:HDI2_Table_trashed",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Table_visible": {
 					"type": "checkbox",
@@ -385,11 +413,12 @@
 					"left": 560,
 					"width": 250,
 					"height": 19,
-					"text": "Visible",
+					"text": ":xliff:HDI2_Table_visible",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"LbTable": {
 					"type": "listbox",
@@ -411,9 +440,6 @@
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -422,7 +448,7 @@
 							],
 							"header": {
 								"name": "Header14",
-								"text": "Name",
+								"text": ":xliff:HDI2_LbTable_Field_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -432,17 +458,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_ID",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -451,7 +476,7 @@
 							],
 							"header": {
 								"name": "Header15",
-								"text": "ID",
+								"text": ":xliff:HDI2_LbTable_Field_ID",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -461,17 +486,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_type",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -480,7 +504,7 @@
 							],
 							"header": {
 								"name": "Header16",
-								"text": "Type ID",
+								"text": ":xliff:HDI2_LbTable_Field_type",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -490,17 +514,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_type_name",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -509,7 +532,7 @@
 							],
 							"header": {
 								"name": "Header1",
-								"text": "Type Name",
+								"text": ":xliff:HDI2_LbTable_Field_type_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -519,17 +542,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_uuid",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -538,7 +560,7 @@
 							],
 							"header": {
 								"name": "Header2",
-								"text": "UUID",
+								"text": ":xliff:HDI2_LbTable_Field_uuid",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -548,17 +570,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_pk",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -567,7 +588,7 @@
 							],
 							"header": {
 								"name": "Header3",
-								"text": "PK",
+								"text": ":xliff:HDI2_LbTable_Field_pk",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -577,17 +598,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_indexed",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -596,7 +616,7 @@
 							],
 							"header": {
 								"name": "Header4",
-								"text": "Indexed",
+								"text": ":xliff:HDI2_LbTable_Field_indexed",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -606,17 +626,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_limiting_length",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -625,7 +644,7 @@
 							],
 							"header": {
 								"name": "Header33",
-								"text": "Limiting length",
+								"text": ":xliff:HDI2_LbTable_Field_limiting_length",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -635,17 +654,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_unique",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -654,7 +672,7 @@
 							],
 							"header": {
 								"name": "Header18",
-								"text": "Unique",
+								"text": ":xliff:HDI2_LbTable_Field_unique",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -664,17 +682,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_autosequence",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -683,7 +700,7 @@
 							],
 							"header": {
 								"name": "Header17",
-								"text": "Autosequence",
+								"text": ":xliff:HDI2_LbTable_Field_autosequence",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -693,17 +710,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_not_null",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -712,7 +728,7 @@
 							],
 							"header": {
 								"name": "Header19",
-								"text": "Not null",
+								"text": ":xliff:HDI2_LbTable_Field_not_null",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -722,17 +738,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_never_null",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -741,7 +756,7 @@
 							],
 							"header": {
 								"name": "Header20",
-								"text": "Never null",
+								"text": ":xliff:HDI2_LbTable_Field_never_null",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -751,17 +766,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_text_switch_size",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -770,7 +784,7 @@
 							],
 							"header": {
 								"name": "Header34",
-								"text": "Text switch size",
+								"text": ":xliff:HDI2_LbTable_Field_text_switch_size",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -780,17 +794,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_blob_switch_size",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -799,7 +812,7 @@
 							],
 							"header": {
 								"name": "Header35",
-								"text": "Blob switch size",
+								"text": ":xliff:HDI2_LbTable_Field_blob_switch_size",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -809,17 +822,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_autogenerate",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -828,7 +840,7 @@
 							],
 							"header": {
 								"name": "Header21",
-								"text": "Autogenerate",
+								"text": ":xliff:HDI2_LbTable_Field_autogenerate",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -838,17 +850,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_hide_in_REST",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -857,7 +868,7 @@
 							],
 							"header": {
 								"name": "Header22",
-								"text": "Hide with 4D Mobile Service",
+								"text": ":xliff:HDI2_LbTable_Field_hide_in_REST",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -867,17 +878,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_visible",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -886,7 +896,7 @@
 							],
 							"header": {
 								"name": "Header23",
-								"text": "Visible",
+								"text": ":xliff:HDI2_LbTable_Field_visible",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -896,17 +906,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_enterable",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -915,7 +924,7 @@
 							],
 							"header": {
 								"name": "Header24",
-								"text": "Enterable",
+								"text": ":xliff:HDI2_LbTable_Field_enterable",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -925,17 +934,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_modifiable",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -944,7 +952,7 @@
 							],
 							"header": {
 								"name": "Header26",
-								"text": "Modifiable",
+								"text": ":xliff:HDI2_LbTable_Field_modifiable",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -954,17 +962,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_mandatory",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -973,7 +980,7 @@
 							],
 							"header": {
 								"name": "Header25",
-								"text": "Mandatory",
+								"text": ":xliff:HDI2_LbTable_Field_mandatory",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -983,17 +990,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_multi_line",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1002,7 +1008,7 @@
 							],
 							"header": {
 								"name": "Header27",
-								"text": "Multi line",
+								"text": ":xliff:HDI2_LbTable_Field_multi_line",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1012,17 +1018,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_compressed",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1031,7 +1036,7 @@
 							],
 							"header": {
 								"name": "Header28",
-								"text": "Compressed",
+								"text": ":xliff:HDI2_LbTable_Field_compressed",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1041,17 +1046,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_enumeration_id",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1060,7 +1064,7 @@
 							],
 							"header": {
 								"name": "Header29",
-								"text": "ChoiceList ID",
+								"text": ":xliff:HDI2_LbTable_Field_enumeration_id",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1070,17 +1074,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_enumeration_name",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1089,7 +1092,7 @@
 							],
 							"header": {
 								"name": "Header36",
-								"text": "ChoiceList name",
+								"text": ":xliff:HDI2_LbTable_Field_enumeration_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1099,17 +1102,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_position",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1118,7 +1120,7 @@
 							],
 							"header": {
 								"name": "Header30",
-								"text": "Position",
+								"text": ":xliff:HDI2_LbTable_Field_position",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1128,17 +1130,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_comment",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1147,7 +1148,7 @@
 							],
 							"header": {
 								"name": "Header31",
-								"text": "Comment",
+								"text": ":xliff:HDI2_LbTable_Field_comment",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1157,17 +1158,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Field_tip",
 							"width": 50,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1176,7 +1176,7 @@
 							],
 							"header": {
 								"name": "Header32",
-								"text": "Tip",
+								"text": ":xliff:HDI2_LbTable_Field_tip",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1186,10 +1186,15 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						}
-					]
+					],
+					"stroke": "automatic",
+					"fill": "automatic",
+					"alternateFill": "automaticAlternate"
 				},
 				"Table_comment": {
 					"type": "input",
@@ -1203,7 +1208,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Text1": {
 					"type": "text",
@@ -1212,7 +1218,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Id:"
+					"text": ":xliff:HDI2_Text1",
+					"stroke": "automatic"
 				},
 				"Text2": {
 					"type": "text",
@@ -1221,7 +1228,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Name:"
+					"text": ":xliff:HDI2_Text2",
+					"stroke": "automatic"
 				},
 				"Text4": {
 					"type": "text",
@@ -1230,7 +1238,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "UUID:"
+					"text": ":xliff:HDI2_Text4",
+					"stroke": "automatic"
 				},
 				"Text5": {
 					"type": "text",
@@ -1239,7 +1248,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "right",
-					"text": "SQL schema id:"
+					"text": ":xliff:HDI2_Text5",
+					"stroke": "automatic"
 				},
 				"Text6": {
 					"type": "text",
@@ -1248,7 +1258,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "right",
-					"text": "SQL schema name:"
+					"text": ":xliff:HDI2_Text6",
+					"stroke": "automatic"
 				},
 				"Text8": {
 					"type": "text",
@@ -1257,7 +1268,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Comment:"
+					"text": ":xliff:HDI2_Text8",
+					"stroke": "automatic"
 				},
 				"Text9": {
 					"type": "text",
@@ -1266,7 +1278,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "left",
-					"text": "Fields:"
+					"text": ":xliff:HDI2_Text9",
+					"stroke": "automatic"
 				},
 				"Text17": {
 					"type": "text",
@@ -1276,7 +1289,8 @@
 					"height": 17,
 					"textAlign": "right",
 					"textDecoration": "underline",
-					"text": "Select a table:"
+					"text": ":xliff:HDI2_Text17",
+					"stroke": "automatic"
 				}
 			}
 		},
@@ -1293,7 +1307,8 @@
 					"method": "ObjectMethods/IndexList.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Index_unique_keys": {
 					"type": "checkbox",
@@ -1301,11 +1316,12 @@
 					"left": 589,
 					"width": 200,
 					"height": 19,
-					"text": "Unique keys",
+					"text": ":xliff:HDI2_Index_unique_keys",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"LbIndex": {
 					"type": "listbox",
@@ -1333,9 +1349,6 @@
 							"width": 253,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1344,7 +1357,7 @@
 							],
 							"header": {
 								"name": "Header5",
-								"text": "Field name",
+								"text": ":xliff:HDI2_LbIndex_index_field_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1354,17 +1367,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "index_field_uuid",
 							"width": 233,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1373,7 +1385,7 @@
 							],
 							"header": {
 								"name": "Header8",
-								"text": "Field UUID",
+								"text": ":xliff:HDI2_LbIndex_index_field_uuid",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1383,17 +1395,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "index_table_name",
 							"width": 251,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1402,7 +1413,7 @@
 							],
 							"header": {
 								"name": "Header7",
-								"text": "Table name",
+								"text": ":xliff:HDI2_LbIndex_index_table_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1412,17 +1423,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "index_table_uuid",
 							"width": 383,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1431,7 +1441,7 @@
 							],
 							"header": {
 								"name": "Header6",
-								"text": "Table UUID",
+								"text": ":xliff:HDI2_LbIndex_index_table_uuid",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1441,10 +1451,15 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						}
-					]
+					],
+					"stroke": "automatic",
+					"fill": "automatic",
+					"alternateFill": "automaticAlternate"
 				},
 				"Index_kind": {
 					"type": "input",
@@ -1458,7 +1473,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Index_name": {
 					"type": "input",
@@ -1472,7 +1488,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Index_uuid": {
 					"type": "input",
@@ -1486,7 +1503,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Text10": {
 					"type": "text",
@@ -1495,7 +1513,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Kind:"
+					"text": ":xliff:HDI2_Text10",
+					"stroke": "automatic"
 				},
 				"Text11": {
 					"type": "text",
@@ -1504,7 +1523,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Name:"
+					"text": ":xliff:HDI2_Text11",
+					"stroke": "automatic"
 				},
 				"Text12": {
 					"type": "text",
@@ -1513,7 +1533,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "UUID:"
+					"text": ":xliff:HDI2_Text12",
+					"stroke": "automatic"
 				},
 				"Index_type": {
 					"type": "input",
@@ -1527,7 +1548,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Text13": {
 					"type": "text",
@@ -1536,7 +1558,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Type:"
+					"text": ":xliff:HDI2_Text13",
+					"stroke": "automatic"
 				},
 				"Text14": {
 					"type": "text",
@@ -1545,7 +1568,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "left",
-					"text": "Fields:"
+					"text": ":xliff:HDI2_Text14",
+					"stroke": "automatic"
 				},
 				"Text28": {
 					"type": "text",
@@ -1555,7 +1579,8 @@
 					"height": 17,
 					"textAlign": "right",
 					"textDecoration": "underline",
-					"text": "Select a index:"
+					"text": ":xliff:HDI2_Text28",
+					"stroke": "automatic"
 				}
 			}
 		},
@@ -1568,7 +1593,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Integrity:"
+					"text": ":xliff:HDI2_Text18",
+					"stroke": "automatic"
 				},
 				"Relation_name_Nto1": {
 					"type": "input",
@@ -1582,7 +1608,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_name_1toN": {
 					"type": "input",
@@ -1596,7 +1623,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_integrity": {
 					"type": "input",
@@ -1610,7 +1638,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_uuid": {
 					"type": "input",
@@ -1624,7 +1653,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Text3": {
 					"type": "text",
@@ -1633,7 +1663,8 @@
 					"width": 121,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Name for N to 1:"
+					"text": ":xliff:HDI2_Text3",
+					"stroke": "automatic"
 				},
 				"Text15": {
 					"type": "text",
@@ -1642,7 +1673,8 @@
 					"width": 118,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Name for 1 to N:"
+					"text": ":xliff:HDI2_Text15",
+					"stroke": "automatic"
 				},
 				"Text16": {
 					"type": "text",
@@ -1651,7 +1683,8 @@
 					"width": 94,
 					"height": 17,
 					"textAlign": "right",
-					"text": "UUID:"
+					"text": ":xliff:HDI2_Text16",
+					"stroke": "automatic"
 				},
 				"Relation_choice_field": {
 					"type": "input",
@@ -1665,7 +1698,8 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Text19": {
 					"type": "text",
@@ -1674,7 +1708,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Choice field:"
+					"text": ":xliff:HDI2_Text19",
+					"stroke": "automatic"
 				},
 				"RelationList": {
 					"type": "dropdown",
@@ -1687,7 +1722,8 @@
 					"method": "ObjectMethods/RelationList.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_auto_load_Nto1": {
 					"type": "checkbox",
@@ -1695,11 +1731,12 @@
 					"left": 612,
 					"width": 250,
 					"height": 19,
-					"text": "Automatic load N to 1",
+					"text": ":xliff:HDI2_Relation_auto_load_Nto1",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_auto_load_1toN": {
 					"type": "checkbox",
@@ -1707,11 +1744,12 @@
 					"left": 612,
 					"width": 250,
 					"height": 19,
-					"text": "Automatic load 1 to N",
+					"text": ":xliff:HDI2_Relation_auto_load_1toN",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_entry_wildchar": {
 					"type": "checkbox",
@@ -1719,11 +1757,12 @@
 					"left": 612,
 					"width": 250,
 					"height": 19,
-					"text": "Auto Wildcard support",
+					"text": ":xliff:HDI2_Relation_entry_wildchar",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_entry_create": {
 					"type": "checkbox",
@@ -1731,11 +1770,12 @@
 					"left": 612,
 					"width": 250,
 					"height": 19,
-					"text": "Prompt if related one does not exist",
+					"text": ":xliff:HDI2_Relation_entry_create",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Relation_entry_autofill": {
 					"type": "checkbox",
@@ -1743,11 +1783,12 @@
 					"left": 612,
 					"width": 250,
 					"height": 19,
-					"text": "Auto assign related value in subform",
+					"text": ":xliff:HDI2_Relation_entry_autofill",
 					"focusable": false,
 					"events": [
 						"onClick"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"LbRelation": {
 					"type": "listbox",
@@ -1774,9 +1815,6 @@
 							"name": "Relation_kind",
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1785,7 +1823,7 @@
 							],
 							"header": {
 								"name": "Header9",
-								"text": "Kind",
+								"text": ":xliff:HDI2_LbRelation_Relation_kind",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1795,17 +1833,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Relation_Field_name",
 							"width": 245,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1814,7 +1851,7 @@
 							],
 							"header": {
 								"name": "Header10",
-								"text": "Field name",
+								"text": ":xliff:HDI2_LbRelation_Relation_Field_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1824,17 +1861,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Relation_field_uuid",
 							"width": 211,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1843,7 +1879,7 @@
 							],
 							"header": {
 								"name": "Header11",
-								"text": "Field UUID",
+								"text": ":xliff:HDI2_LbRelation_Relation_field_uuid",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1853,17 +1889,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Relation_table_name",
 							"width": 200,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1872,7 +1907,7 @@
 							],
 							"header": {
 								"name": "Header12",
-								"text": "Table name",
+								"text": ":xliff:HDI2_LbRelation_Relation_table_name",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1882,17 +1917,16 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						},
 						{
 							"name": "Relation_table_uuid",
 							"width": 344,
 							"minWidth": 10,
 							"maxWidth": 32000,
-							"stroke": "automatic",
-							"fill": "automatic",
-							"alternateFill": "automatic",
 							"textAlign": "automatic",
 							"verticalAlign": "automatic",
 							"events": [
@@ -1901,7 +1935,7 @@
 							],
 							"header": {
 								"name": "Header13",
-								"text": "Table UUID",
+								"text": ":xliff:HDI2_LbRelation_Relation_table_uuid",
 								"stroke": "automatic",
 								"textAlign": "automatic",
 								"verticalAlign": "automatic"
@@ -1911,10 +1945,15 @@
 								"stroke": "automatic",
 								"fill": "automatic",
 								"textAlign": "automatic",
-								"verticalAlign": "automatic"
-							}
+								"verticalAlign": "automatic",
+								"truncateMode": "none"
+							},
+							"truncateMode": "none"
 						}
-					]
+					],
+					"stroke": "automatic",
+					"fill": "automatic",
+					"alternateFill": "automaticAlternate"
 				},
 				"Text22": {
 					"type": "text",
@@ -1923,7 +1962,8 @@
 					"width": 126,
 					"height": 17,
 					"textAlign": "left",
-					"text": "Fields:"
+					"text": ":xliff:HDI2_Text22",
+					"stroke": "automatic"
 				},
 				"Text29": {
 					"type": "text",
@@ -1933,7 +1973,8 @@
 					"height": 17,
 					"textAlign": "right",
 					"textDecoration": "underline",
-					"text": "Select a relation:\r\r:"
+					"text": ":xliff:HDI2_Text29",
+					"stroke": "automatic"
 				}
 			}
 		},
@@ -1947,7 +1988,8 @@
 					"height": 81,
 					"sizingX": "grow",
 					"fontWeight": "bold",
-					"text": "There are also 2 methods which have been implemented in order to respond exactly like AP Get field info and AP Get table info. These commands could be imported inside your database, for the same kind of analysis. \r\r"
+					"text": ":xliff:HDI2_Text7",
+					"stroke": "automatic"
 				},
 				"Text20": {
 					"type": "text",
@@ -1955,7 +1997,8 @@
 					"left": 634,
 					"width": 524,
 					"height": 161,
-					"text": "Get field info ( numTable ; numField ; relTable ; relFld ; props ; choiceList )\r      with:\r         numTable (Integer): Table number \t\r         numField (Integer):  Field number \t\r         relTable (Integer):    Related table \t\r         relFld (Integer):        Related field \t\r         props (Longint):       Field properties \t\r         choiceList  (String): Choice list"
+					"text": ":xliff:HDI2_Text20",
+					"stroke": "automatic"
 				},
 				"Text21": {
 					"type": "text",
@@ -1963,7 +2006,8 @@
 					"left": 81,
 					"width": 471,
 					"height": 129,
-					"text": "Get table info  ( numTable ; invisible ; destruct ) \r      with:\r         numTable (Integer): Table number \t\r         invisible (Integer):   1, if the table is invisible 0, if the table is visible \t\r         destruct (Integer):  1, for physical deletion of the records 0, for logical deletion of the records \t\r\r "
+					"text": ":xliff:HDI2_Text21",
+					"stroke": "automatic"
 				},
 				"Picture8": {
 					"type": "picture",
@@ -1988,26 +2032,26 @@
 					"top": 382,
 					"left": 173,
 					"width": 235,
-					"height": 21,
-					"text": "Open \"Get table info\" method",
+					"text": ":xliff:HDI2_Button2",
 					"focusable": false,
 					"method": "ObjectMethods/Button2.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "default"
 				},
 				"Button3": {
 					"type": "button",
 					"top": 382,
 					"left": 775,
 					"width": 235,
-					"height": 21,
-					"text": "Open \"Get field info\" method",
+					"text": ":xliff:HDI2_Button3",
 					"focusable": false,
 					"method": "ObjectMethods/Button3.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"class": "default"
 				}
 			}
 		}

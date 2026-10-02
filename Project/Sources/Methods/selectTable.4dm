@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 $name:=cbTableList{cbTableList}
 
-C_OBJECT:C1216($oTable)
+var $oTable : Object
 ARRAY OBJECT:C1221($arrTable; 0)
 
 // search the selected table in the oStructure Object

@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 $name:=cbIndexList{cbIndexList}
 
-C_OBJECT:C1216($oTable)
+var $oTable : Object
 ARRAY OBJECT:C1221($arrIndex; 0)
 
 // search the selected index in the oStructure Object
@@ -13,7 +13,7 @@ For ($i; 1; Size of array:C274($arrIndex))
 			$i:=Size of array:C274($arrIndex)+1
 		End if 
 	Else 
-		If (("No name - "+OB Get:C1224($arrIndex{$i}; "uuid"))=$name)
+		If ((Localized string("IndexNoName")+" - "+OB Get:C1224($arrIndex{$i}; "uuid"))=$name)
 			$oTable:=$arrIndex{$i}
 			$i:=Size of array:C274($arrIndex)+1
 		End if 

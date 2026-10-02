@@ -11,14 +11,15 @@
 // Parameters: table ID
 // ----------------------------------------------------
 
-C_LONGINT:C283($1; $invisible; $destruct)
-C_TEXT:C284($tableNumber; $oldErrorHandler)
+#DECLARE($numTable : Integer; $invisiblePtr : Pointer; $destructPtr : Pointer)
+var $invisible; $destruct : Integer
+var $tableNumber; $oldErrorHandler : Text
 ARRAY TEXT:C222($arrTableName; 0)
 ARRAY TEXT:C222($arrRefTable; 0)
 
-$tableNumber:=String:C10($1)
+$tableNumber:=String:C10($numTable)
 
-C_TEXT:C284($XMLStructure)
+var $XMLStructure : Text
 EXPORT STRUCTURE:C1311($XMLStructure)
 
 $refXMLStructure:=DOM Parse XML variable:C720($xmlStructure)
@@ -68,5 +69,5 @@ For ($tableCounter; 1; $numberTable)
 	End if 
 End for 
 
-$2->:=$invisible
-$3->:=$destruct
+$invisiblePtr->:=$invisible
+$destructPtr->:=$destruct

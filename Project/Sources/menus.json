@@ -37,7 +37,7 @@
 			"title": ":xliff:CommonMenuFile",
 			"items": [
 				{
-					"title": "Demo",
+					"title": ":xliff:MenuItemDemo",
 					"method": "00_Start"
 				},
 				{
@@ -46,9 +46,9 @@
 				},
 				{
 					"title": ":xliff:CommonMenuItemQuit",
-					"method": "m_Quit",
 					"shortcutAccel": true,
-					"shortcutKey": "Q"
+					"shortcutKey": "Q",
+					"action": "quit"
 				}
 			]
 		},
@@ -187,7 +187,7 @@
 					"action": "quit"
 				},
 				{
-					"title": "Demo...",
+					"title": ":xliff:MenuItemDemo",
 					"method": "00_Start"
 				}
 			]

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="HDI2" source-language="en" target-language="ja">
+	<body>
+		<trans-unit id="HDI2_TabInfo" resname="HDI2_TabInfo">
+			<source>Info</source>
+			<target>情報</target>
+		</trans-unit>
+		<trans-unit id="HDI2_TabTables" resname="HDI2_TabTables">
+			<source>Tables</source>
+			<target>テーブル</target>
+		</trans-unit>
+		<trans-unit id="HDI2_TabIndexes" resname="HDI2_TabIndexes">
+			<source>Indexes</source>
+			<target>インデックス</target>
+		</trans-unit>
+		<trans-unit id="HDI2_TabRelations" resname="HDI2_TabRelations">
+			<source>Relations</source>
+			<target>リレーション</target>
+		</trans-unit>
+		<trans-unit id="HDI2_TabExtra" resname="HDI2_TabExtra">
+			<source>Extra</source>
+			<target>その他</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Button" resname="HDI2_Button">
+			<source>XML structure</source>
+			<target>XMLストラクチャ</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Button4" resname="HDI2_Button4">
+			<source>Open "getDatabaseStructure" method</source>
+			<target>"getDatabaseStructure" メソッドを開く</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Button1" resname="HDI2_Button1">
+			<source>JSON structure</source>
+			<target>JSONストラクチャ</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text" resname="HDI2_Text">
+			<source>You can retrieve the information on the database structure with the EXPORT STRUCTURE command. The whole database structure definition is exported in XML tree. &#13;&#13;In this example:&#13;</source>
+			<target>EXPORT STRUCTURE コマンドを使用して、データベースストラクチャの情報を取得できます。ストラクチャ定義全体が XML ツリーとして書き出されます。&#13;&#13;この例では:&#13;</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text23" resname="HDI2_Text23">
+			<source>We export the database structure in xml. Click on  "XML structure" button to see the xml tree. </source>
+			<target>データベースストラクチャを XML で書き出します。"XMLストラクチャ" ボタンをクリックすると XML ツリーが表示されます。</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text24" resname="HDI2_Text24">
+			<source>We parse the xml tree to retrieve:&#13;   * the table and field information&#13;   * the index information&#13;   * the relation information. &#13;Click on  "Open getDatabaseStructure method" button to see the code. </source>
+			<target>XML ツリーを解析して、次の情報を取得します:&#13;   * テーブルとフィールドの情報&#13;   * インデックスの情報&#13;   * リレーションの情報&#13;"getDatabaseStructure メソッドを開く" ボタンをクリックするとコードが表示されます。</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text25" resname="HDI2_Text25">
+			<source>We save the result in an object variable. Click on "JSON structure" button to see the exported object in JSON file.</source>
+			<target>結果はオブジェクト変数に保存されます。"JSONストラクチャ" ボタンをクリックすると、書き出されたオブジェクトが JSON ファイルで表示されます。</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text26" resname="HDI2_Text26">
+			<source>We display the content of object in the other tabs:&#13;   * Tables&#13;   * Indexes&#13;   * Relations</source>
+			<target>オブジェクトの内容は他のタブに表示されます:&#13;   * テーブル&#13;   * インデックス&#13;   * リレーション</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text27" resname="HDI2_Text27">
+			<source>In the last "Extra" tab, we provide you two 4D methods to replace the 4D Pack commands:&#13;   * _AP Get table info&#13;   * _AP Get field info</source>
+			<target>最後の "その他" タブでは、4D Pack コマンドの代わりとなる 2 つの 4D メソッドを提供します:&#13;   * _AP Get table info&#13;   * _AP Get field info</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_leave_tag_on_delete" resname="HDI2_Table_leave_tag_on_delete">
+			<source>Leave tag on delete record</source>
+			<target>レコード削除時にタグを残す</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_trigger_insert" resname="HDI2_Table_trigger_insert">
+			<source>Trigger: On saving new record</source>
+			<target>トリガ: 新規レコード保存時</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_keep_record_sync_info" resname="HDI2_Table_keep_record_sync_info">
+			<source>Enable replication</source>
+			<target>レプリケーションを有効にする</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_trigger_delete" resname="HDI2_Table_trigger_delete">
+			<source>Trigger: On deleting a record</source>
+			<target>トリガ: レコード削除時</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_hide_in_REST" resname="HDI2_Table_hide_in_REST">
+			<source>Hide with 4D Mobile Service</source>
+			<target>4D Mobile Service で非表示</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_trigger_update" resname="HDI2_Table_trigger_update">
+			<source>Trigger: On saving a existing record</source>
+			<target>トリガ: 既存レコード保存時</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_prevent_journaling" resname="HDI2_Table_prevent_journaling">
+			<source>Exclude from journal file</source>
+			<target>ジャーナルファイルから除外</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_trashed" resname="HDI2_Table_trashed">
+			<source>Trashed</source>
+			<target>ゴミ箱</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Table_visible" resname="HDI2_Table_visible">
+			<source>Visible</source>
+			<target>表示</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_name" resname="HDI2_LbTable_Field_name">
+			<source>Name</source>
+			<target>名前</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_ID" resname="HDI2_LbTable_Field_ID">
+			<source>ID</source>
+			<target>ID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_type" resname="HDI2_LbTable_Field_type">
+			<source>Type ID</source>
+			<target>タイプID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_type_name" resname="HDI2_LbTable_Field_type_name">
+			<source>Type Name</source>
+			<target>タイプ名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_uuid" resname="HDI2_LbTable_Field_uuid">
+			<source>UUID</source>
+			<target>UUID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_pk" resname="HDI2_LbTable_Field_pk">
+			<source>PK</source>
+			<target>主キー</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_indexed" resname="HDI2_LbTable_Field_indexed">
+			<source>Indexed</source>
+			<target>インデックス済み</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_limiting_length" resname="HDI2_LbTable_Field_limiting_length">
+			<source>Limiting length</source>
+			<target>長さ制限</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_unique" resname="HDI2_LbTable_Field_unique">
+			<source>Unique</source>
+			<target>ユニーク</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_autosequence" resname="HDI2_LbTable_Field_autosequence">
+			<source>Autosequence</source>
+			<target>自動連番</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_not_null" resname="HDI2_LbTable_Field_not_null">
+			<source>Not null</source>
+			<target>Null不可</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_never_null" resname="HDI2_LbTable_Field_never_null">
+			<source>Never null</source>
+			<target>常にNull不可</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_text_switch_size" resname="HDI2_LbTable_Field_text_switch_size">
+			<source>Text switch size</source>
+			<target>テキスト切替サイズ</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_blob_switch_size" resname="HDI2_LbTable_Field_blob_switch_size">
+			<source>Blob switch size</source>
+			<target>BLOB切替サイズ</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_autogenerate" resname="HDI2_LbTable_Field_autogenerate">
+			<source>Autogenerate</source>
+			<target>自動生成</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_hide_in_REST" resname="HDI2_LbTable_Field_hide_in_REST">
+			<source>Hide with 4D Mobile Service</source>
+			<target>4D Mobile Service で非表示</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_visible" resname="HDI2_LbTable_Field_visible">
+			<source>Visible</source>
+			<target>表示</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_enterable" resname="HDI2_LbTable_Field_enterable">
+			<source>Enterable</source>
+			<target>入力可</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_modifiable" resname="HDI2_LbTable_Field_modifiable">
+			<source>Modifiable</source>
+			<target>変更可</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_mandatory" resname="HDI2_LbTable_Field_mandatory">
+			<source>Mandatory</source>
+			<target>必須</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_multi_line" resname="HDI2_LbTable_Field_multi_line">
+			<source>Multi line</source>
+			<target>複数行</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_compressed" resname="HDI2_LbTable_Field_compressed">
+			<source>Compressed</source>
+			<target>圧縮</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_enumeration_id" resname="HDI2_LbTable_Field_enumeration_id">
+			<source>ChoiceList ID</source>
+			<target>選択リストID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_enumeration_name" resname="HDI2_LbTable_Field_enumeration_name">
+			<source>ChoiceList name</source>
+			<target>選択リスト名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_position" resname="HDI2_LbTable_Field_position">
+			<source>Position</source>
+			<target>位置</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_comment" resname="HDI2_LbTable_Field_comment">
+			<source>Comment</source>
+			<target>コメント</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbTable_Field_tip" resname="HDI2_LbTable_Field_tip">
+			<source>Tip</source>
+			<target>ヒント</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text1" resname="HDI2_Text1">
+			<source>Id:</source>
+			<target>ID:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text2" resname="HDI2_Text2">
+			<source>Name:</source>
+			<target>名前:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text4" resname="HDI2_Text4">
+			<source>UUID:</source>
+			<target>UUID:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text5" resname="HDI2_Text5">
+			<source>SQL schema id:</source>
+			<target>SQLスキーマID:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text6" resname="HDI2_Text6">
+			<source>SQL schema name:</source>
+			<target>SQLスキーマ名:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text8" resname="HDI2_Text8">
+			<source>Comment:</source>
+			<target>コメント:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text9" resname="HDI2_Text9">
+			<source>Fields:</source>
+			<target>フィールド:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text17" resname="HDI2_Text17">
+			<source>Select a table:</source>
+			<target>テーブルを選択:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Index_unique_keys" resname="HDI2_Index_unique_keys">
+			<source>Unique keys</source>
+			<target>ユニークキー</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbIndex_index_field_name" resname="HDI2_LbIndex_index_field_name">
+			<source>Field name</source>
+			<target>フィールド名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbIndex_index_field_uuid" resname="HDI2_LbIndex_index_field_uuid">
+			<source>Field UUID</source>
+			<target>フィールドUUID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbIndex_index_table_name" resname="HDI2_LbIndex_index_table_name">
+			<source>Table name</source>
+			<target>テーブル名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbIndex_index_table_uuid" resname="HDI2_LbIndex_index_table_uuid">
+			<source>Table UUID</source>
+			<target>テーブルUUID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text10" resname="HDI2_Text10">
+			<source>Kind:</source>
+			<target>種類:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text11" resname="HDI2_Text11">
+			<source>Name:</source>
+			<target>名前:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text12" resname="HDI2_Text12">
+			<source>UUID:</source>
+			<target>UUID:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text13" resname="HDI2_Text13">
+			<source>Type:</source>
+			<target>タイプ:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text14" resname="HDI2_Text14">
+			<source>Fields:</source>
+			<target>フィールド:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text28" resname="HDI2_Text28">
+			<source>Select a index:</source>
+			<target>インデックスを選択:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text18" resname="HDI2_Text18">
+			<source>Integrity:</source>
+			<target>整合性:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text3" resname="HDI2_Text3">
+			<source>Name for N to 1:</source>
+			<target>N対1の名前:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text15" resname="HDI2_Text15">
+			<source>Name for 1 to N:</source>
+			<target>1対Nの名前:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text16" resname="HDI2_Text16">
+			<source>UUID:</source>
+			<target>UUID:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text19" resname="HDI2_Text19">
+			<source>Choice field:</source>
+			<target>選択フィールド:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Relation_auto_load_Nto1" resname="HDI2_Relation_auto_load_Nto1">
+			<source>Automatic load N to 1</source>
+			<target>N対1を自動読み込み</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Relation_auto_load_1toN" resname="HDI2_Relation_auto_load_1toN">
+			<source>Automatic load 1 to N</source>
+			<target>1対Nを自動読み込み</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Relation_entry_wildchar" resname="HDI2_Relation_entry_wildchar">
+			<source>Auto Wildcard support</source>
+			<target>ワイルドカードを自動サポート</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Relation_entry_create" resname="HDI2_Relation_entry_create">
+			<source>Prompt if related one does not exist</source>
+			<target>リレート先が存在しない場合に確認</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Relation_entry_autofill" resname="HDI2_Relation_entry_autofill">
+			<source>Auto assign related value in subform</source>
+			<target>サブフォームでリレート値を自動割り当て</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbRelation_Relation_kind" resname="HDI2_LbRelation_Relation_kind">
+			<source>Kind</source>
+			<target>種類</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbRelation_Relation_Field_name" resname="HDI2_LbRelation_Relation_Field_name">
+			<source>Field name</source>
+			<target>フィールド名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbRelation_Relation_field_uuid" resname="HDI2_LbRelation_Relation_field_uuid">
+			<source>Field UUID</source>
+			<target>フィールドUUID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbRelation_Relation_table_name" resname="HDI2_LbRelation_Relation_table_name">
+			<source>Table name</source>
+			<target>テーブル名</target>
+		</trans-unit>
+		<trans-unit id="HDI2_LbRelation_Relation_table_uuid" resname="HDI2_LbRelation_Relation_table_uuid">
+			<source>Table UUID</source>
+			<target>テーブルUUID</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text22" resname="HDI2_Text22">
+			<source>Fields:</source>
+			<target>フィールド:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text29" resname="HDI2_Text29">
+			<source>Select a relation:&#13;&#13;:</source>
+			<target>リレーションを選択:&#13;&#13;:</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text7" resname="HDI2_Text7">
+			<source>There are also 2 methods which have been implemented in order to respond exactly like AP Get field info and AP Get table info. These commands could be imported inside your database, for the same kind of analysis. &#13;&#13;</source>
+			<target>AP Get field info と AP Get table info とまったく同じように応答する 2 つのメソッドも実装されています。同様の解析のために、これらのメソッドをデータベースにインポートして使用できます。&#13;&#13;</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text20" resname="HDI2_Text20">
+			<source>Get field info ( numTable ; numField ; relTable ; relFld ; props ; choiceList )&#13;      with:&#13;         numTable (Integer): Table number &#9;&#13;         numField (Integer):  Field number &#9;&#13;         relTable (Integer):    Related table &#9;&#13;         relFld (Integer):        Related field &#9;&#13;         props (Longint):       Field properties &#9;&#13;         choiceList  (String): Choice list</source>
+			<target>Get field info ( numTable ; numField ; relTable ; relFld ; props ; choiceList )&#13;      with:&#13;         numTable (Integer): Table number &#9;&#13;         numField (Integer):  Field number &#9;&#13;         relTable (Integer):    Related table &#9;&#13;         relFld (Integer):        Related field &#9;&#13;         props (Longint):       Field properties &#9;&#13;         choiceList  (String): Choice list</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Text21" resname="HDI2_Text21">
+			<source>Get table info  ( numTable ; invisible ; destruct ) &#13;      with:&#13;         numTable (Integer): Table number &#9;&#13;         invisible (Integer):   1, if the table is invisible 0, if the table is visible &#9;&#13;         destruct (Integer):  1, for physical deletion of the records 0, for logical deletion of the records &#9;&#13;&#13; </source>
+			<target>Get table info  ( numTable ; invisible ; destruct ) &#13;      with:&#13;         numTable (Integer): Table number &#9;&#13;         invisible (Integer):   1, if the table is invisible 0, if the table is visible &#9;&#13;         destruct (Integer):  1, for physical deletion of the records 0, for logical deletion of the records &#9;&#13;&#13; </target>
+		</trans-unit>
+		<trans-unit id="HDI2_Button2" resname="HDI2_Button2">
+			<source>Open "Get table info" method</source>
+			<target>"Get table info" メソッドを開く</target>
+		</trans-unit>
+		<trans-unit id="HDI2_Button3" resname="HDI2_Button3">
+			<source>Open "Get field info" method</source>
+			<target>"Get field info" メソッドを開く</target>
+		</trans-unit>
+	</body>
+	</file>
+</xliff>

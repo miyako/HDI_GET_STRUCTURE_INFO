@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
 
-C_OBJECT:C1216($oTable; $1; $otmp)
+#DECLARE($oTable : Object)
+var $otmp : Object
 
-$oTable:=$1
 
 p_Index_kind:=OBJECT Get pointer:C1124(Object named:K67:5; "Index_kind")
 p_Index_name:=OBJECT Get pointer:C1124(Object named:K67:5; "Index_name")
@@ -15,7 +15,7 @@ p_Index_name->:=OB Get:C1224($oTable; "name")
 p_Index_uuid->:=OB Get:C1224($oTable; "uuid")
 
 
-C_TEXT:C284($tmpVal)
+var $tmpVal : Text
 $tmpVal:=OB Get:C1224($oTable; "type")
 Case of 
 	: ($tmpVal="1")
@@ -23,7 +23,7 @@ Case of
 	: ($tmpVal="3")
 		p_Index_type->:="Cluster B-tree"
 	: ($tmpVal="7")
-		p_Index_type->:="Automatic"
+		p_Index_type->:=Localized string("IndexTypeAutomatic")
 	Else 
 		p_Index_type->:=$tmpVal
 End case 

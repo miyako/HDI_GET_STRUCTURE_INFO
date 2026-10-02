@@ -1,0 +1,16 @@
+/* hidden reference rectangle: read at runtime with OBJECT GET RGB COLORS (see getListColors) */
+@media (prefers-color-scheme: light) {
+	.ref-list-colors {
+		fill: #FFFFFF;
+		stroke: #000000;
+		visibility: hidden;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.ref-list-colors {
+		fill: #1E1E1E;
+		stroke: #E0E0E0;
+		visibility: hidden;
+	}
+}

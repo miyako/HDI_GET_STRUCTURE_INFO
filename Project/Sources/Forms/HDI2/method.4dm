@@ -1,7 +1,7 @@
 Case of 
 		
 	: (Form event code:C388=On Load:K2:1)
-		C_OBJECT:C1216(oStructure)
+		var oStructure : Object
 		ARRAY TEXT:C222(cbTableList; 0)
 		ARRAY TEXT:C222(cbIndexList; 0)
 		ARRAY TEXT:C222(cbRelationList; 0)
@@ -26,7 +26,7 @@ Case of
 			If (OB Is defined:C1231($arr{$i}; "name")=True:C214)
 				APPEND TO ARRAY:C911(cbIndexList; OB Get:C1224($arr{$i}; "name")+" - "+OB Get:C1224($arr{$i}; "uuid"))
 			Else 
-				APPEND TO ARRAY:C911(cbIndexList; "No name - "+OB Get:C1224($arr{$i}; "uuid"))
+				APPEND TO ARRAY:C911(cbIndexList; Localized string("IndexNoName")+" - "+OB Get:C1224($arr{$i}; "uuid"))
 			End if 
 		End for 
 		

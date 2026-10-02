@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 
 // ----------------------------------------------------
 // User name (OS): Vanessa Talbot
@@ -15,7 +15,7 @@
 // ----------------------------------------------------
 
 
-C_OBJECT:C1216($oStructure)
+#DECLARE->$oStructure : Object
 ARRAY OBJECT:C1221($arrTmp; 0)
 
 // getTablesAndFields
@@ -29,5 +29,3 @@ OB SET ARRAY:C1227($oStructure; "index"; $arrTmp)
 //getRelations 
 OB GET ARRAY:C1229(getRelations; "relation"; $arrTmp)
 OB SET ARRAY:C1227($oStructure; "relation"; $arrTmp)
-
-$0:=$oStructure

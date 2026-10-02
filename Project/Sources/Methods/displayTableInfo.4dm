@@ -1,14 +1,16 @@
 //%attributes = {"invisible":true}
-C_OBJECT:C1216($oTable; $1; $otmp)
+#DECLARE($oTable : Object)
+var $otmp : Object
 
-$oTable:=$1
 
 If (OB Is defined:C1231($oTable; "color")=True:C214)
 	$otmp:=OB Get:C1224($oTable; "color")
 	$color:=(OB Get:C1224($otmp; "red"; Is longint:K8:6) << 16)+(OB Get:C1224($otmp; "green"; Is longint:K8:6) << 8)+OB Get:C1224($otmp; "blue"; Is longint:K8:6)
 	OBJECT SET RGB COLORS:C628(*; "LbTable"; 0; $color)
 Else 
-	OBJECT SET RGB COLORS:C628(*; "LbTable"; 0; 0x00FFFFFF)
+	var $colors : Object
+	$colors:=getListColors
+	OBJECT SET RGB COLORS:C628(*; "LbTable"; $colors.foreground; $colors.background)
 End if 
 
 p_Table_id:=OBJECT Get pointer:C1124(Object named:K67:5; "Table_id")

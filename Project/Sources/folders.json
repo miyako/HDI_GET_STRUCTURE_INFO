@@ -29,6 +29,7 @@
 			"displayIndex",
 			"displayRelation",
 			"displayTableInfo",
+			"getListColors",
 			"selectIndex",
 			"selectRelation",
 			"selectTable"
@@ -40,8 +41,7 @@
 	"Méthodes projet par défaut": {
 		"methods": [
 			"00_Start",
-			"exportMethod",
-			"m_Quit"
+			"exportMethod"
 		]
 	},
 	"Replace 4D Pack Command": {

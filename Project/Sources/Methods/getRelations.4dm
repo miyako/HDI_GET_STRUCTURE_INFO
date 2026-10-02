@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 
 // ----------------------------------------------------
 // User name (OS): Vanessa Talbot
@@ -18,11 +18,12 @@
 // ----------------------------------------------------
 
 
-C_TEXT:C284($XMLStructure; $tmpName; $tmpVal)
-C_LONGINT:C283($iRef; $iAtt)
+#DECLARE->$oRelation : Object
+var $XMLStructure; $tmpName; $tmpVal : Text
+var $iRef; $iAtt : Integer
 ARRAY TEXT:C222($arrRef; 0)
 
-C_OBJECT:C1216($oRelation; $oTmp; $oTmp2; $oColor)
+var $oTmp; $oTmp2; $oColor : Object
 ARRAY OBJECT:C1221($arrRelation; 0)
 ARRAY OBJECT:C1221($arrRelatedField; 0)
 
@@ -193,4 +194,3 @@ DOM CLOSE XML:C722($refXMLStructure)
 
 OB SET ARRAY:C1227($oRelation; "relation"; $arrRelation)
 
-$0:=$oRelation

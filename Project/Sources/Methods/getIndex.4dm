@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 
 // ----------------------------------------------------
 // User name (OS): Vanessa Talbot
@@ -18,11 +18,12 @@
 // 
 // ----------------------------------------------------
 
-C_TEXT:C284($xmlStructure; $name; $tmpName; $tmpVal)
-C_LONGINT:C283($iRef; $iAtt; $numberRef)
+#DECLARE->$oIndex : Object
+var $xmlStructure; $name; $tmpName; $tmpVal : Text
+var $iRef; $iAtt; $numberRef : Integer
 ARRAY TEXT:C222($arrRef; 0)
 
-C_OBJECT:C1216($oIndex; $oTmp; $oTmp2)
+var $oTmp; $oTmp2 : Object
 ARRAY OBJECT:C1221($arrIndex; 0)
 ARRAY OBJECT:C1221($arrField; 0)
 
@@ -106,5 +107,3 @@ End for
 DOM CLOSE XML:C722($refXMLStructure)
 
 OB SET ARRAY:C1227($oIndex; "index"; $arrIndex)
-
-$0:=$oIndex

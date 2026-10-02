@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
-C_OBJECT:C1216($1)
-C_TEXT:C284($tmpVal)
+#DECLARE($oTable : Object)
+var $tmpVal : Text
 ARRAY OBJECT:C1221($arrField; 0)
-OB GET ARRAY:C1229($1; "Field"; $arrField)
+OB GET ARRAY:C1229($oTable; "Field"; $arrField)
 
 $size:=Size of array:C274($arrField)
 
@@ -65,16 +65,19 @@ ARRAY TEXT:C222(p_Field_tip->; $size)
 
 
 
+var $colors : Object
+$colors:=getListColors
+
 For ($i; 1; $size)
 	
-	C_OBJECT:C1216($otmp)
+	var $otmp : Object
 	
 	If (OB Is defined:C1231($arrField{$i}; "color")=True:C214)
 		$otmp:=OB Get:C1224($arrField{$i}; "color")
 		$color:=(OB Get:C1224($otmp; "red"; Is longint:K8:6) << 16)+(OB Get:C1224($otmp; "green"; Is longint:K8:6) << 8)+OB Get:C1224($otmp; "blue"; Is longint:K8:6)
 		LISTBOX SET ROW COLOR:C1270(*; "LbTable"; $i; $color; lk font color:K53:24)
 	Else 
-		LISTBOX SET ROW COLOR:C1270(*; "LbTable"; $i; 0; lk font color:K53:24)
+		LISTBOX SET ROW COLOR:C1270(*; "LbTable"; $i; $colors.foreground; lk font color:K53:24)
 	End if 
 	
 	p_Field_name->{$i}:=OB Get:C1224($arrField{$i}; "name")

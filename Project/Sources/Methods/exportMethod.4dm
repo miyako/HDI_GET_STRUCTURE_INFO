@@ -1,6 +1,6 @@
 //%attributes = {}
-C_TEXT:C284($code)
-C_TEXT:C284($contents)
+var $code : Text
+var $contents : Text
 
 $code:=METHOD Get path:C1164(Path project method:K72:1; "Get field info")
 METHOD GET CODE:C1190($code; $contents; 1)

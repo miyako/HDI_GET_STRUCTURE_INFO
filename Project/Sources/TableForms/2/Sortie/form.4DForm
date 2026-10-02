@@ -59,7 +59,8 @@
 					"width": 280,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_Alp : "
+					"text": ":xliff:TableForms_Champ_Alp",
+					"stroke": "automatic"
 				},
 				"S2_Texte": {
 					"type": "text",
@@ -68,7 +69,8 @@
 					"width": 240,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_txt : "
+					"text": ":xliff:TableForms_Champ_txt",
+					"stroke": "automatic"
 				},
 				"S3_Texte": {
 					"type": "text",
@@ -77,7 +79,8 @@
 					"width": 81,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_date : "
+					"text": ":xliff:TableForms_Champ_date",
+					"stroke": "automatic"
 				},
 				"S4_Texte": {
 					"type": "text",
@@ -86,7 +89,8 @@
 					"width": 80,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_time : "
+					"text": ":xliff:TableForms_Champ_time",
+					"stroke": "automatic"
 				},
 				"S5_Texte": {
 					"type": "text",
@@ -95,7 +99,8 @@
 					"width": 80,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_bool : "
+					"text": ":xliff:TableForms_Champ_bool",
+					"stroke": "automatic"
 				},
 				"S6_Texte": {
 					"type": "text",
@@ -104,7 +109,8 @@
 					"width": 69,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_int : "
+					"text": ":xliff:TableForms_Champ_int",
+					"stroke": "automatic"
 				},
 				"S7_Texte": {
 					"type": "text",
@@ -113,7 +119,8 @@
 					"width": 96,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_longint : "
+					"text": ":xliff:TableForms_Champ_longint",
+					"stroke": "automatic"
 				},
 				"S8_Texte": {
 					"type": "text",
@@ -122,7 +129,8 @@
 					"width": 102,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_int64bit : "
+					"text": ":xliff:TableForms_Champ_int64bit",
+					"stroke": "automatic"
 				},
 				"S9_Texte": {
 					"type": "text",
@@ -131,7 +139,8 @@
 					"width": 76,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_real : "
+					"text": ":xliff:TableForms_Champ_real",
+					"stroke": "automatic"
 				},
 				"S10_Texte": {
 					"type": "text",
@@ -140,7 +149,8 @@
 					"width": 81,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_float : "
+					"text": ":xliff:TableForms_Champ_float",
+					"stroke": "automatic"
 				},
 				"S11_Texte": {
 					"type": "text",
@@ -149,7 +159,8 @@
 					"width": 400,
 					"height": 17,
 					"sizingX": "grow",
-					"text": "Champ_obj : "
+					"text": ":xliff:TableForms_Champ_obj",
+					"stroke": "automatic"
 				},
 				"Rectangle13": {
 					"type": "rectangle",
@@ -158,7 +169,8 @@
 					"width": 1945,
 					"height": 25,
 					"sizingX": "grow",
-					"stroke": "transparent"
+					"stroke": "transparent",
+					"fill": "automatic"
 				},
 				"S1_Champ": {
 					"type": "input",
@@ -168,7 +180,7 @@
 					"height": 17,
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_Alp:2",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -183,7 +195,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S2_Champ": {
 					"type": "input",
@@ -193,7 +206,7 @@
 					"height": 17,
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_txt:3",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -208,7 +221,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S3_Champ": {
 					"type": "input",
@@ -219,7 +233,7 @@
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_date:4",
 					"dataSourceTypeHint": "date",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -234,7 +248,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S4_Champ": {
 					"type": "input",
@@ -246,7 +261,7 @@
 					"dataSource": "[Table_2:2]T2Champ_time:5",
 					"dataSourceTypeHint": "time",
 					"focusable": false,
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
@@ -262,7 +277,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S5_Champ": {
 					"type": "checkbox",
@@ -272,7 +288,7 @@
 					"height": 15,
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_bool:6",
-					"text": "Vrai",
+					"text": ":xliff:TableForms_Vrai",
 					"events": [
 						"onLoad",
 						"onValidate",
@@ -283,7 +299,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S6_Champ": {
 					"type": "input",
@@ -293,7 +310,7 @@
 					"height": 17,
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_int:7",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -308,7 +325,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S7_Champ": {
 					"type": "input",
@@ -320,7 +338,7 @@
 					"dataSource": "[Table_2:2]T2Champ_longint:8",
 					"dataSourceTypeHint": "integer",
 					"focusable": false,
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
@@ -336,7 +354,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S8_Champ": {
 					"type": "input",
@@ -346,7 +365,7 @@
 					"height": 17,
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_int64bit:9",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -361,7 +380,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S9_Champ": {
 					"type": "input",
@@ -372,7 +392,7 @@
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_real:10",
 					"dataSourceTypeHint": "number",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -387,7 +407,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S10_Champ": {
 					"type": "input",
@@ -398,7 +419,7 @@
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_float:11",
 					"dataSourceTypeHint": "number",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -413,7 +434,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"S11_Champ": {
 					"type": "input",
@@ -424,7 +446,7 @@
 					"sizingX": "grow",
 					"dataSource": "[Table_2:2]T2Champ_obj:14",
 					"dataSourceTypeHint": "object",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -439,7 +461,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Ligne14": {
 					"type": "line",

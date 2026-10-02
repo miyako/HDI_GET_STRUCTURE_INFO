@@ -47,7 +47,7 @@
 					"width": 100,
 					"height": 12,
 					"dataSource": "vRecNum",
-					"stroke": "#000000",
+					"stroke": "automatic",
 					"fontFamily": "System Font",
 					"fontSize": 9,
 					"focusable": false,
@@ -74,8 +74,8 @@
 					"width": 578,
 					"height": 17,
 					"sizingX": "grow",
-					"stroke": "#000000",
-					"text": "Copy_of_Table_1"
+					"stroke": "automatic",
+					"text": ":xliff:TableForms_Copy_of_Table_1"
 				},
 				"Ligne34": {
 					"type": "line",
@@ -266,7 +266,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_Alp : "
+					"text": ":xliff:TableForms_Champ_Alp",
+					"stroke": "automatic"
 				},
 				"Texte36": {
 					"type": "text",
@@ -275,7 +276,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_txt : "
+					"text": ":xliff:TableForms_Champ_txt",
+					"stroke": "automatic"
 				},
 				"Texte37": {
 					"type": "text",
@@ -284,7 +286,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_date : "
+					"text": ":xliff:TableForms_Champ_date",
+					"stroke": "automatic"
 				},
 				"Texte38": {
 					"type": "text",
@@ -293,7 +296,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_time : "
+					"text": ":xliff:TableForms_Champ_time",
+					"stroke": "automatic"
 				},
 				"Texte39": {
 					"type": "text",
@@ -302,7 +306,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_bool : "
+					"text": ":xliff:TableForms_Champ_bool",
+					"stroke": "automatic"
 				},
 				"Texte40": {
 					"type": "text",
@@ -311,7 +316,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_int : "
+					"text": ":xliff:TableForms_Champ_int",
+					"stroke": "automatic"
 				},
 				"Texte41": {
 					"type": "text",
@@ -320,7 +326,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_longint : "
+					"text": ":xliff:TableForms_Champ_longint",
+					"stroke": "automatic"
 				},
 				"Texte42": {
 					"type": "text",
@@ -329,7 +336,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_int64bit : "
+					"text": ":xliff:TableForms_Champ_int64bit",
+					"stroke": "automatic"
 				},
 				"Texte43": {
 					"type": "text",
@@ -338,7 +346,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_real : "
+					"text": ":xliff:TableForms_Champ_real",
+					"stroke": "automatic"
 				},
 				"Texte44": {
 					"type": "text",
@@ -347,7 +356,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_float : "
+					"text": ":xliff:TableForms_Champ_float",
+					"stroke": "automatic"
 				},
 				"Texte45": {
 					"type": "text",
@@ -356,7 +366,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_pict : "
+					"text": ":xliff:TableForms_Champ_pict",
+					"stroke": "automatic"
 				},
 				"Champ_Alp": {
 					"type": "input",
@@ -366,7 +377,7 @@
 					"height": 17,
 					"dataSource": "[Table_2:2]T2Champ_Alp:2",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -381,7 +392,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_txt": {
 					"type": "input",
@@ -391,7 +403,7 @@
 					"height": 65,
 					"dataSource": "[Table_2:2]T2Champ_txt:3",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"scrollbarVertical": "visible",
@@ -407,7 +419,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_date": {
 					"type": "input",
@@ -418,7 +431,7 @@
 					"dataSource": "[Table_2:2]T2Champ_date:4",
 					"dataSourceTypeHint": "date",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -433,7 +446,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_time": {
 					"type": "input",
@@ -445,7 +459,7 @@
 					"dataSourceTypeHint": "time",
 					"textAlign": "left",
 					"focusable": false,
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"enterable": false,
 					"contextMenu": "none",
@@ -461,7 +475,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_bool": {
 					"type": "checkbox",
@@ -470,8 +485,8 @@
 					"width": 63,
 					"height": 15,
 					"dataSource": "[Table_2:2]T2Champ_bool:6",
-					"text": "Vrai",
-					"stroke": "#000000",
+					"text": ":xliff:TableForms_Vrai",
+					"stroke": "automatic",
 					"textAlign": "left",
 					"events": [
 						"onLoad",
@@ -493,7 +508,7 @@
 					"height": 17,
 					"dataSource": "[Table_2:2]T2Champ_int:7",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -508,7 +523,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_longint": {
 					"type": "input",
@@ -520,7 +536,7 @@
 					"dataSourceTypeHint": "integer",
 					"textAlign": "left",
 					"focusable": false,
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"enterable": false,
 					"contextMenu": "none",
@@ -536,7 +552,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_int64bit": {
 					"type": "input",
@@ -546,7 +563,7 @@
 					"height": 17,
 					"dataSource": "[Table_2:2]T2Champ_int64bit:9",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -561,7 +578,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_real": {
 					"type": "input",
@@ -572,7 +590,7 @@
 					"dataSource": "[Table_2:2]T2Champ_real:10",
 					"dataSourceTypeHint": "number",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -587,7 +605,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_float": {
 					"type": "input",
@@ -598,7 +617,7 @@
 					"dataSource": "[Table_2:2]T2Champ_float:11",
 					"dataSourceTypeHint": "number",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"dragging": "none",
@@ -613,7 +632,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				},
 				"Champ_pict": {
 					"type": "input",
@@ -623,7 +643,7 @@
 					"height": 250,
 					"dataSource": "[Table_2:2]T2Champ_pict:13",
 					"dataSourceTypeHint": "picture",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"scrollbarVertical": "visible",
 					"scrollbarHorizontal": "visible",
@@ -638,7 +658,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				}
 			}
 		},
@@ -651,7 +672,8 @@
 					"width": 112,
 					"height": 17,
 					"textAlign": "right",
-					"text": "Champ_obj : "
+					"text": ":xliff:TableForms_Champ_obj",
+					"stroke": "automatic"
 				},
 				"Champ_obj": {
 					"type": "input",
@@ -662,7 +684,7 @@
 					"dataSource": "[Table_2:2]T2Champ_obj:14",
 					"dataSourceTypeHint": "object",
 					"textAlign": "left",
-					"fill": "#FFFFFF",
+					"fill": "automatic",
 					"borderStyle": "sunken",
 					"contextMenu": "none",
 					"multiline": "yes",
@@ -679,7 +701,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"stroke": "automatic"
 				}
 			}
 		}

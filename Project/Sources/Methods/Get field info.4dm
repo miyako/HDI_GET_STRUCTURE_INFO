@@ -9,12 +9,11 @@
 //
 // Parameters: table ID and field ID
 // ----------------------------------------------------
-C_LONGINT:C283($1; $2)
-C_POINTER:C301($3; $4; $5; $6)
-C_LONGINT:C283($relTable; $relFld; $props; $bitFieldToReturn)
-C_TEXT:C284($tableNumberParameter; $fieldNumberParameter; $choiceList; $oldErrorHandler; tableDescription)
-$tableNumberParameter:=String:C10($1)
-$fieldNumberParameter:=String:C10($2)
+#DECLARE($numTable : Integer; $numField : Integer; $relTablePtr : Pointer; $relFldPtr : Pointer; $propsPtr : Pointer; $choiceListPtr : Pointer)
+var $relTable; $relFld; $props; $bitFieldToReturn : Integer
+var $tableNumberParameter; $fieldNumberParameter; $choiceList; $oldErrorHandler; tableDescription : Text
+$tableNumberParameter:=String:C10($numTable)
+$fieldNumberParameter:=String:C10($numField)
 $relTable:=0
 $relFld:=0
 $props:=0
@@ -25,9 +24,9 @@ ARRAY TEXT:C222($arrRefTable; 0)
 ARRAY TEXT:C222($arrRefField; 0)
 
 //object structure
-C_OBJECT:C1216($obTable)
+var $obTable : Object
 
-C_TEXT:C284($XMLStructure)
+var $XMLStructure : Text
 EXPORT STRUCTURE:C1311($XMLStructure)
 
 $refXMLStructure:=DOM Parse XML variable:C720($XMLStructure)
@@ -54,7 +53,7 @@ For ($tableCounter; 1; $numberTable)
 	ARRAY OBJECT:C1221($arrTempObField; $numberField)
 	
 	For ($fieldCounter; 1; $numberField)
-		C_OBJECT:C1216($obField)
+		var $obField : Object
 		
 		DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "id"; $fieldNumber)
 		DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "name"; $valueFieldName)
@@ -101,7 +100,7 @@ For ($tableCounter; 1; $numberTable)
 			If ($fieldNumberParameter=$fieldNumber)
 				
 				//related field
-				C_TEXT:C284($valueFieldUUID; $valueTableUUID; $valueFieldName)
+				var $valueFieldUUID; $valueTableUUID; $valueFieldName : Text
 				ARRAY TEXT:C222($arrRefRelation; 0)
 				
 				// we save the field and table UUIDs. We need them for retrieving the related field ID 
@@ -116,13 +115,13 @@ For ($tableCounter; 1; $numberTable)
 				$numberRelation:=Size of array:C274($arrRefRelation)
 				
 				//flag if the field has a relation
-				C_BOOLEAN:C305($flagRelation)
+				var $flagRelation : Boolean
 				$flagRelation:=False:C215
 				
 				//we get the related field UUID (only available in the XML)
 				For ($relationCounter; 1; $numberRelation)
 					If (Not:C34($flagRelation))
-						C_TEXT:C284($name; $value; $refXMLRelationRelatedFieldSourc; $refXMLRelationRelatedFieldDesti; $refFieldSource; $relationTableUUIDSource; $relationTableUUIDDesti)
+						var $name; $value; $refXMLRelationRelatedFieldSourc; $refXMLRelationRelatedFieldDesti; $refFieldSource; $relationTableUUIDSource; $relationTableUUIDDesti : Text
 						
 						$refXMLRelationRelatedFieldSourc:=DOM Find XML element:C864($arrRefRelation{$relationCounter}; "relation/related_field")
 						
@@ -139,7 +138,7 @@ For ($tableCounter; 1; $numberTable)
 						$refFieldTableDesti:=DOM Find XML element:C864($refXMLRelationRelatedFieldDesti; "related_field/field_ref/table_ref")
 						DOM GET XML ATTRIBUTE BY NAME:C728($refFieldTableDesti; "uuid"; $relationTableUUIDDesti)
 						
-						C_TEXT:C284($relatedTableUUID; $relatedFieldUUID)
+						var $relatedTableUUID; $relatedFieldUUID : Text
 						Case of 
 								//the source is the field entered in parameter. It will be N->1 relation
 							: ($relationFieldUUIDSource=$valueFieldUUID)
@@ -207,7 +206,7 @@ For ($tableCounter; 1; $numberTable)
 										
 										If ($relatedFieldUUID=$uuidTemp)
 											
-											C_TEXT:C284($fieldRelID)
+											var $fieldRelID : Text
 											//retrieve the field found.
 											$relFld:=OB Get:C1224($arrField{$counter2}; "id"; Is longint:K8:6)
 											
@@ -254,7 +253,7 @@ For ($tableCounter; 1; $numberTable)
 				End if 
 				
 				// choice list
-				C_LONGINT:C283($valueFieldInt)
+				var $valueFieldInt : Integer
 				$valueFieldInt:=0
 				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
 				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "enumeration_id"; $valueFieldInt)
@@ -309,7 +308,7 @@ End for
 
 
 // return the information collected
-$3->:=$relTable
-$4->:=$relFld
-$5->:=$bitFieldToReturn  // props
-$6->:=$choiceList
+$relTablePtr->:=$relTable
+$relFldPtr->:=$relFld
+$propsPtr->:=$bitFieldToReturn  // props
+$choiceListPtr->:=$choiceList

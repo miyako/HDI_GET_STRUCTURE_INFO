@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 $name:=cbRelationList{cbRelationList}
 
-C_OBJECT:C1216($oTable)
+var $oTable : Object
 ARRAY OBJECT:C1221($arr; 0)
 
 // search the selected relation in the oStructure Object

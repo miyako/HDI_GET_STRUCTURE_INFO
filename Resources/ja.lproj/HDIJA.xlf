@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="HDI" source-language="en" target-language="ja">
+	<body>
+		<trans-unit id="HDI_TxtInfo1" resname="HDI_TxtInfo1">
+			<source>How Do I...</source>
+			<target>How Do I...</target>
+		</trans-unit>
+		<trans-unit id="HDI_TxtInfo2" resname="HDI_TxtInfo2">
+			<source>… get detailed information on my database structure?</source>
+			<target>… データベースストラクチャの詳細情報を取得するには?</target>
+		</trans-unit>
+		<trans-unit id="HDI_TxtVersion" resname="HDI_TxtVersion">
+			<source>4D v16 and above…</source>
+			<target>4D v16 以降…</target>
+		</trans-unit>
+		<trans-unit id="HDI_BtnDemo" resname="HDI_BtnDemo">
+			<source>Demo</source>
+			<target>デモ</target>
+		</trans-unit>
+	</body>
+	</file>
+</xliff>

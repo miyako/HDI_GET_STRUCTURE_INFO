@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="TableForms" source-language="en" target-language="en">
+	<body>
+		<trans-unit id="TableForms_Table_1" resname="TableForms_Table_1">
+			<source>Table_1</source>
+			<target>Table_1</target>
+		</trans-unit>
+		<trans-unit id="TableForms_ID" resname="TableForms_ID">
+			<source>ID : </source>
+			<target>ID : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_Alp" resname="TableForms_Champ_Alp">
+			<source>Champ_Alp : </source>
+			<target>Champ_Alp : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_txt" resname="TableForms_Champ_txt">
+			<source>Champ_txt : </source>
+			<target>Champ_txt : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_date" resname="TableForms_Champ_date">
+			<source>Champ_date : </source>
+			<target>Champ_date : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_time" resname="TableForms_Champ_time">
+			<source>Champ_time : </source>
+			<target>Champ_time : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_bool" resname="TableForms_Champ_bool">
+			<source>Champ_bool : </source>
+			<target>Champ_bool : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_int" resname="TableForms_Champ_int">
+			<source>Champ_int : </source>
+			<target>Champ_int : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_longint" resname="TableForms_Champ_longint">
+			<source>Champ_longint : </source>
+			<target>Champ_longint : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_int64bit" resname="TableForms_Champ_int64bit">
+			<source>Champ_int64bit : </source>
+			<target>Champ_int64bit : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_real" resname="TableForms_Champ_real">
+			<source>Champ_real : </source>
+			<target>Champ_real : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_float" resname="TableForms_Champ_float">
+			<source>Champ_float : </source>
+			<target>Champ_float : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_pict" resname="TableForms_Champ_pict">
+			<source>Champ_pict : </source>
+			<target>Champ_pict : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Vrai" resname="TableForms_Vrai">
+			<source>True</source>
+			<target>True</target>
+		</trans-unit>
+		<trans-unit id="TableForms_Champ_obj" resname="TableForms_Champ_obj">
+			<source>Champ_obj : </source>
+			<target>Champ_obj : </target>
+		</trans-unit>
+		<trans-unit id="TableForms_Copy_of_Table_1" resname="TableForms_Copy_of_Table_1">
+			<source>Copy_of_Table_1</source>
+			<target>Copy_of_Table_1</target>
+		</trans-unit>
+	</body>
+	</file>
+</xliff>

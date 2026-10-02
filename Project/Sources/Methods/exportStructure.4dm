@@ -1,20 +1,20 @@
-//%attributes = {}
-C_TEXT:C284($1)
+//%attributes = {"invisible":true}
+#DECLARE($format : Text)
 
-C_TIME:C306(vhDoc)
-vhDoc:=Create document:C266(""; $1)
+var vhDoc : Time
+vhDoc:=Create document:C266(""; $format)
 
 If (OK=1)
 	CLOSE DOCUMENT:C267(vhDoc)
 	
 	Case of 
-		: ($1="xml")
-			C_TEXT:C284($vTStruc)
+		: ($format="xml")
+			var $vTStruc : Text
 			EXPORT STRUCTURE:C1311($vTStruc)
 			TEXT TO DOCUMENT:C1237(Document; $vTStruc)
 			
-		: ($1="json")
-			C_OBJECT:C1216($oStructure)
+		: ($format="json")
+			var $oStructure : Object
 			$oStructure:=getDatabaseStructure
 			TEXT TO DOCUMENT:C1237(Document; JSON Stringify:C1217($oStructure; *))
 	End case 

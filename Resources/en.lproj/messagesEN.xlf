@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+	<file datatype="plaintext" original="messages" source-language="en" target-language="en">
+	<body>
+		<trans-unit id="IndexNoName" resname="IndexNoName">
+			<source>No name</source>
+			<target>No name</target>
+		</trans-unit>
+		<trans-unit id="IndexTypeAutomatic" resname="IndexTypeAutomatic">
+			<source>Automatic</source>
+			<target>Automatic</target>
+		</trans-unit>
+	</body>
+	</file>
+</xliff>
