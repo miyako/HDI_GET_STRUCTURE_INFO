@@ -1,0 +1,315 @@
+//%attributes = {"invisible":true,"shared":true}
+// ----------------------------------------------------
+// User name (OS): Adrien Cagniant
+// Date and time: 30/11/16, 17:28:19
+// ----------------------------------------------------
+// Method: Get field infos
+// Description
+// see former AP Get field info 4D Pack command
+//
+// Parameters: table ID and field ID
+// ----------------------------------------------------
+C_LONGINT:C283($1; $2)
+C_POINTER:C301($3; $4; $5; $6)
+C_LONGINT:C283($relTable; $relFld; $props; $bitFieldToReturn)
+C_TEXT:C284($tableNumberParameter; $fieldNumberParameter; $choiceList; $oldErrorHandler; tableDescription)
+$tableNumberParameter:=String:C10($1)
+$fieldNumberParameter:=String:C10($2)
+$relTable:=0
+$relFld:=0
+$props:=0
+$bitFieldToReturn:=0
+$choiceList:=""
+
+ARRAY TEXT:C222($arrRefTable; 0)
+ARRAY TEXT:C222($arrRefField; 0)
+
+//object structure
+C_OBJECT:C1216($obTable)
+
+C_TEXT:C284($XMLStructure)
+EXPORT STRUCTURE:C1311($XMLStructure)
+
+$refXMLStructure:=DOM Parse XML variable:C720($XMLStructure)
+$refXMLTable:=DOM Find XML element:C864($refXMLStructure; "base/table"; $arrRefTable)
+$numberTable:=Size of array:C274($arrRefTable)
+ARRAY TEXT:C222($arrTableNumber; $numberTable)
+ARRAY TEXT:C222($arrTableUUID; $numberTable)
+ARRAY TEXT:C222($arrTableName; $numberTable)
+//structure of the database table/field (with name, uuid, Id)
+ARRAY OBJECT:C1221($arrObBase; $numberTable)
+
+//Retrieve database in an Object Array  $arrObBase
+For ($tableCounter; 1; $numberTable)
+	// get each ID table
+	DOM GET XML ATTRIBUTE BY NAME:C728($arrRefTable{$tableCounter}; "id"; $arrTableNumber{$tableCounter})
+	DOM GET XML ATTRIBUTE BY NAME:C728($arrRefTable{$tableCounter}; "uuid"; $arrTableUUID{$tableCounter})
+	DOM GET XML ATTRIBUTE BY NAME:C728($arrRefTable{$tableCounter}; "name"; $arrTableName{$tableCounter})
+	
+	$refXMLTable:=DOM Find XML element:C864($arrRefTable{$tableCounter}; "table/field"; $arrRefField)
+	$numberField:=Size of array:C274($arrRefField)
+	ARRAY TEXT:C222(arrFieldID; $numberField)
+	
+	$fieldCounter:=0
+	ARRAY OBJECT:C1221($arrTempObField; $numberField)
+	
+	For ($fieldCounter; 1; $numberField)
+		C_OBJECT:C1216($obField)
+		
+		DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "id"; $fieldNumber)
+		DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "name"; $valueFieldName)
+		DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "uuid"; $valueFielduuid)
+		
+		OB SET:C1220($obField; "id"; $fieldNumber; "name"; $valueFieldName; "uuid"; $valueFielduuid)
+		$arrTempObField{$fieldCounter}:=OB Copy:C1225($obField)
+		
+	End for 
+	
+	OB SET:C1220($obTable; "id"; $arrTableNumber{$tableCounter}; "name"; $arrTableName{$tableCounter}; "uuid"; $arrTableUUID{$tableCounter})
+	OB SET ARRAY:C1227($obTable; "fields"; $arrTempObField)
+	
+	$arrObBase{$tableCounter}:=OB Copy:C1225($obTable)
+	
+End for 
+
+
+// loop on each table 
+For ($tableCounter; 1; $numberTable)
+	// get each table ID
+	DOM GET XML ATTRIBUTE BY NAME:C728($arrRefTable{$tableCounter}; "id"; $arrTableNumber{$tableCounter})
+	
+	// condition: if the table ID is the one we search
+	If ($tableNumberParameter=$arrTableNumber{$tableCounter})
+		
+		// we get the table XML tree for testing purposes
+		DOM EXPORT TO VAR:C863($arrRefTable{$tableCounter}; tableDescription)
+		
+		// we look inside all fields for retrieving the information
+		$refXMLTable:=DOM Find XML element:C864($arrRefTable{$tableCounter}; "table/field"; $arrRefField)
+		$numberField:=Size of array:C274($arrRefField)
+		
+		ARRAY TEXT:C222(arrFieldID; $numberField)
+		
+		//loop inside each field. 
+		For ($fieldCounter; 1; $numberField)
+			
+			$oldErrorHandler:=Method called on error:C704
+			ON ERR CALL:C155("errHandler")
+			DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "id"; $fieldNumber)
+			
+			// if we found the same ID for the field we go inside that child : it's the one we are looking for
+			If ($fieldNumberParameter=$fieldNumber)
+				
+				//related field
+				C_TEXT:C284($valueFieldUUID; $valueTableUUID; $valueFieldName)
+				ARRAY TEXT:C222($arrRefRelation; 0)
+				
+				// we save the field and table UUIDs. We need them for retrieving the related field ID 
+				$valueFieldUUID:=""
+				DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "uuid"; $valueFieldUUID)
+				
+				$refXMLRelationTableRefTable1:=DOM Find XML element:C864($arrRefRelation{$relationCounter}; "relation/related_field/field_ref/table_ref")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLRelationTableRefTable1; "uuid"; $valueTableUUID)
+				
+				//We go to the relation child.
+				$refXMLRelation:=DOM Find XML element:C864($refXMLStructure; "base/relation"; $arrRefRelation)
+				$numberRelation:=Size of array:C274($arrRefRelation)
+				
+				//flag if the field has a relation
+				C_BOOLEAN:C305($flagRelation)
+				$flagRelation:=False:C215
+				
+				//we get the related field UUID (only available in the XML)
+				For ($relationCounter; 1; $numberRelation)
+					If (Not:C34($flagRelation))
+						C_TEXT:C284($name; $value; $refXMLRelationRelatedFieldSourc; $refXMLRelationRelatedFieldDesti; $refFieldSource; $relationTableUUIDSource; $relationTableUUIDDesti)
+						
+						$refXMLRelationRelatedFieldSourc:=DOM Find XML element:C864($arrRefRelation{$relationCounter}; "relation/related_field")
+						
+						$refXMLRelationRelatedFieldDesti:=DOM Get next sibling XML element:C724($refXMLRelationRelatedFieldSourc; $name; $value)
+						
+						// if kind is source we see it will be N->1 relation
+						$refFieldSource:=DOM Find XML element:C864($refXMLRelationRelatedFieldSourc; "related_field/field_ref")
+						DOM GET XML ATTRIBUTE BY NAME:C728($refFieldSource; "uuid"; $relationFieldUUIDSource)
+						$refFieldTableSource:=DOM Find XML element:C864($refXMLRelationRelatedFieldSourc; "related_field/field_ref/table_ref")
+						DOM GET XML ATTRIBUTE BY NAME:C728($refFieldTableSource; "uuid"; $relationTableUUIDSource)
+						
+						$refFieldDestination:=DOM Find XML element:C864($refXMLRelationRelatedFieldDesti; "related_field/field_ref")
+						DOM GET XML ATTRIBUTE BY NAME:C728($refFieldDestination; "uuid"; $relationFieldUUIDDesti)
+						$refFieldTableDesti:=DOM Find XML element:C864($refXMLRelationRelatedFieldDesti; "related_field/field_ref/table_ref")
+						DOM GET XML ATTRIBUTE BY NAME:C728($refFieldTableDesti; "uuid"; $relationTableUUIDDesti)
+						
+						C_TEXT:C284($relatedTableUUID; $relatedFieldUUID)
+						Case of 
+								//the source is the field entered in parameter. It will be N->1 relation
+							: ($relationFieldUUIDSource=$valueFieldUUID)
+								$flagRelation:=True:C214
+								$relatedTableUUID:=$relationTableUUIDDesti
+								$relatedFieldUUID:=$relationFieldUUIDDesti
+								// not working with AP GET FIELD INFO
+								$bitFieldToReturn:=$bitFieldToReturn+64
+								
+								//list of attributes needed 
+								//Automatic N to 1 relation with automatic assignment  (many to one options. Automatic)
+								DOM GET XML ATTRIBUTE BY NAME:C728($arrRefRelation{$relationCounter}; "auto_load_Nto1"; $auto_load)
+								If ($auto_load="true")
+									$bitFieldToReturn:=$bitFieldToReturn+1
+								End if 
+								
+								//the destination is the field entered in parameter. It will be a 1->N relation
+							: ($relationFieldUUIDDesti=$valueFieldUUID)
+								
+								$flagRelation:=True:C214
+								$relatedTableUUID:=$relationTableUUIDSource
+								$relatedFieldUUID:=$relationFieldUUIDSource
+								// not working with AP GET FIELD INFO
+								$bitFieldToReturn:=$bitFieldToReturn+32
+								
+								
+								//entry_autofill 
+								DOM GET XML ATTRIBUTE BY NAME:C728($refFieldDestination; "entry_autofill"; $entryAutofill)
+								If ($entryAutofill="true")
+									$bitFieldToReturn:=$bitFieldToReturn+1
+								End if 
+								
+								// Deletion of related records
+								DOM GET XML ATTRIBUTE BY NAME:C728($arrRefRelation{$relationCounter}; "integrity"; $relationIntegrity)
+								If ($relationIntegrity="delete")
+									$bitFieldToReturn:=$bitFieldToReturn+3
+								End if 
+								
+								
+								//else no relation
+							Else 
+								//doNothing
+								
+						End case 
+						
+						//if we found any relation with the loop below
+						If ($flagRelation)
+							
+							//retrieve the field ID and table ID
+							
+							For ($counter1; 1; Size of array:C274($arrObBase))
+								
+								//retrieve the table found
+								$uuidTemp:=OB Get:C1224($arrObBase{$counter1}; "uuid")
+								
+								If ($relatedTableUUID=$uuidTemp)
+									$relTable:=OB Get:C1224($arrObBase{$counter1}; "id"; Is longint:K8:6)
+									
+									ARRAY OBJECT:C1221($arrField; 0)
+									OB GET ARRAY:C1229($arrObBase{$counter1}; "fields"; $arrField)
+									
+									For ($counter2; 1; Size of array:C274($arrField))
+										
+										$uuidTemp:=OB Get:C1224($arrField{$counter2}; "uuid")
+										
+										If ($relatedFieldUUID=$uuidTemp)
+											
+											C_TEXT:C284($fieldRelID)
+											//retrieve the field found.
+											$relFld:=OB Get:C1224($arrField{$counter2}; "id"; Is longint:K8:6)
+											
+										End if 
+									End for 
+								End if 
+							End for 
+							
+							// else no relation
+						Else 
+							$relTable:=0
+							$relFld:=0
+						End if 
+						
+					End if 
+				End for 
+				
+				// indexed
+				$valueField:="Not indexed"
+				$refXMLFieldIndex:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/index_ref")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLFieldIndex; "uuid"; $valueField)
+				If (Not:C34($refXMLFieldIndex="00000000000000000000000000000000"))
+					$valueField:="Indexed"
+					$bitFieldToReturn:=$bitFieldToReturn+32768
+				End if 
+				
+				// unique
+				$valueField:="Not unique"
+				DOM GET XML ATTRIBUTE BY NAME:C728($arrRefField{$fieldCounter}; "unique"; $valueField)
+				If ($valueField="true")
+					$valueField:="Unique"
+					$bitFieldToReturn:=$bitFieldToReturn+16384
+					
+				End if 
+				
+				// mandatory
+				$valueField:="Not mandatory"
+				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "mandatory"; $valueField)
+				If ($valueField="true")
+					$valueField:="Mandatory"
+					$bitFieldToReturn:=$bitFieldToReturn+8192
+					
+				End if 
+				
+				// choice list
+				C_LONGINT:C283($valueFieldInt)
+				$valueFieldInt:=0
+				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "enumeration_id"; $valueFieldInt)
+				If (Not:C34($valueFieldInt=0))
+					$bitFieldToReturn:=$bitFieldToReturn+4096
+					ARRAY LONGINT:C221($_choiceListID; 0)
+					ARRAY TEXT:C222($_choiceListNames; 0)
+					LIST OF CHOICE LISTS:C957($_choiceListID; $_choiceListNames)
+					$choiceList:=$_choiceListNames{$valueFieldInt}
+				Else 
+					$choiceList:=""
+				End if 
+				
+				// modifiable
+				$valueField:="Modifiable"
+				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "modifiable"; $valueField)
+				If ($valueField="False")
+					$valueField:="Not modifiable"
+				Else 
+					$bitFieldToReturn:=$bitFieldToReturn+2048
+				End if 
+				
+				//enterable
+				$valueField:="Enterable"
+				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "enterable"; $valueField)
+				If ($valueField="false")
+					$valueField:="Display only"
+				Else 
+					$bitFieldToReturn:=$bitFieldToReturn+1024
+				End if 
+				
+				//Invisible
+				$valueField:="Visible"
+				$refXMLTableExtra:=DOM Find XML element:C864($arrRefField{$fieldCounter}; "field/field_extra")
+				DOM GET XML ATTRIBUTE BY NAME:C728($refXMLTableExtra; "visible"; $valueField)
+				If ($valueField="false")
+					$valueField:="Invisible"
+					$bitFieldToReturn:=$bitFieldToReturn+256
+				End if 
+				
+				
+				//return to default error managment.
+				ON ERR CALL:C155($oldErrorHandler)
+			End if 
+			
+		End for 
+	End if 
+End for 
+
+
+
+// return the information collected
+$3->:=$relTable
+$4->:=$relFld
+$5->:=$bitFieldToReturn  // props
+$6->:=$choiceList

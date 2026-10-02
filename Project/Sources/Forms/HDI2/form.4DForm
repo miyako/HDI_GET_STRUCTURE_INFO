@@ -1,0 +1,2015 @@
+{
+	"destination": "detailScreen",
+	"windowMinWidth": 1000,
+	"windowMinHeight": 800,
+	"width": 1200,
+	"height": 820,
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onValidate",
+		"onClick",
+		"onOutsideCall",
+		"onDoubleClick",
+		"onDrop",
+		"onMenuSelect",
+		"onPluginArea",
+		"onDataChange",
+		"onDragOver",
+		"onTimer",
+		"onAfterKeystroke",
+		"onAfterEdit",
+		"onBeginDragOver",
+		"onBoundVariableChange",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"TabControl": {
+					"type": "tab",
+					"top": 20,
+					"left": 20,
+					"width": 1160,
+					"height": 780,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "vTabControl",
+					"dataSourceTypeHint": "arrayText",
+					"labels": [
+						"Info",
+						"Tables",
+						"Indexes",
+						"Relations",
+						"Extra"
+					],
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Button": {
+					"type": "button",
+					"top": 178,
+					"left": 772,
+					"width": 280,
+					"height": 22,
+					"text": "XML structure",
+					"focusable": false,
+					"method": "ObjectMethods/Button.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button4": {
+					"type": "button",
+					"top": 254,
+					"left": 772,
+					"width": 280,
+					"height": 21,
+					"text": "Open \"getDatabaseStructure\" method",
+					"focusable": false,
+					"method": "ObjectMethods/Button4.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button1": {
+					"type": "button",
+					"top": 383,
+					"left": 772,
+					"width": 280,
+					"height": 22,
+					"text": "JSON structure",
+					"focusable": false,
+					"method": "ObjectMethods/Button1.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 93,
+					"left": 40,
+					"width": 1120,
+					"height": 65,
+					"fontWeight": "bold",
+					"text": "You can retrieve the information on the database structure with the EXPORT STRUCTURE command. The whole database structure definition is exported in XML tree. \r\rIn this example:\r"
+				},
+				"Text23": {
+					"type": "text",
+					"top": 178,
+					"left": 128,
+					"width": 560,
+					"height": 49,
+					"fontWeight": "bold",
+					"text": "We export the database structure in xml. Click on  \"XML structure\" button to see the xml tree. "
+				},
+				"Text24": {
+					"type": "text",
+					"top": 254,
+					"left": 128,
+					"width": 560,
+					"height": 113,
+					"fontWeight": "bold",
+					"text": "We parse the xml tree to retrieve:\r   * the table and field information\r   * the index information\r   * the relation information. \rClick on  \"Open getDatabaseStructure method\" button to see the code. "
+				},
+				"Text25": {
+					"type": "text",
+					"top": 383,
+					"left": 128,
+					"width": 560,
+					"height": 49,
+					"fontWeight": "bold",
+					"text": "We save the result in an object variable. Click on \"JSON structure\" button to see the exported object in JSON file."
+				},
+				"Text26": {
+					"type": "text",
+					"top": 469,
+					"left": 128,
+					"width": 560,
+					"height": 97,
+					"fontWeight": "bold",
+					"text": "We display the content of object in the other tabs:\r   * Tables\r   * Indexes\r   * Relations"
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 181,
+					"left": 88,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/1.png"
+				},
+				"Picture3": {
+					"type": "picture",
+					"top": 254,
+					"left": 88,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/2.png"
+				},
+				"Picture4": {
+					"type": "picture",
+					"top": 383,
+					"left": 88,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/3.png"
+				},
+				"Picture5": {
+					"type": "picture",
+					"top": 469,
+					"left": 88,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/4.png"
+				},
+				"Picture6": {
+					"type": "picture",
+					"top": 577,
+					"left": 88,
+					"width": 20,
+					"height": 20,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/5.png"
+				},
+				"Text27": {
+					"type": "text",
+					"top": 577,
+					"left": 128,
+					"width": 560,
+					"height": 97,
+					"fontWeight": "bold",
+					"text": "In the last \"Extra\" tab, we provide you two 4D methods to replace the 4D Pack commands:\r   * _AP Get table info\r   * _AP Get field info"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Table_id": {
+					"type": "input",
+					"top": 172,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Table_sql_schema_id": {
+					"type": "input",
+					"top": 318,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Table_name": {
+					"type": "input",
+					"top": 200,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Table_sql_schema_name": {
+					"type": "input",
+					"top": 345,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Table_uuid": {
+					"type": "input",
+					"top": 228,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"TableList": {
+					"type": "dropdown",
+					"top": 94,
+					"left": 172,
+					"width": 432,
+					"height": 21,
+					"dataSource": "cbTableList",
+					"focusable": false,
+					"method": "ObjectMethods/TableList.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Table_leave_tag_on_delete": {
+					"type": "checkbox",
+					"top": 171,
+					"left": 560,
+					"width": 250,
+					"height": 19,
+					"text": "Leave tag on delete record",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_trigger_insert": {
+					"type": "checkbox",
+					"top": 171,
+					"left": 873,
+					"width": 250,
+					"height": 19,
+					"text": "Trigger: On saving new record",
+					"focusable": false
+				},
+				"Table_keep_record_sync_info": {
+					"type": "checkbox",
+					"top": 196,
+					"left": 560,
+					"width": 250,
+					"height": 19,
+					"text": "Enable replication",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_trigger_delete": {
+					"type": "checkbox",
+					"top": 196,
+					"left": 873,
+					"width": 250,
+					"height": 19,
+					"text": "Trigger: On deleting a record",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_hide_in_REST": {
+					"type": "checkbox",
+					"top": 220,
+					"left": 560,
+					"width": 250,
+					"height": 19,
+					"text": "Hide with 4D Mobile Service",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_trigger_update": {
+					"type": "checkbox",
+					"top": 221,
+					"left": 873,
+					"width": 250,
+					"height": 19,
+					"text": "Trigger: On saving a existing record",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_prevent_journaling": {
+					"type": "checkbox",
+					"top": 244,
+					"left": 560,
+					"width": 250,
+					"height": 19,
+					"text": "Exclude from journal file",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_trashed": {
+					"type": "checkbox",
+					"top": 246,
+					"left": 873,
+					"width": 250,
+					"height": 19,
+					"text": "Trashed",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Table_visible": {
+					"type": "checkbox",
+					"top": 268,
+					"left": 560,
+					"width": 250,
+					"height": 19,
+					"text": "Visible",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"LbTable": {
+					"type": "listbox",
+					"top": 420,
+					"left": 40,
+					"width": 1120,
+					"height": 360,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"scrollbarHorizontal": "automatic",
+					"columns": [
+						{
+							"name": "Field_name",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header14",
+								"text": "Name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer14",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_ID",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header15",
+								"text": "ID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer15",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_type",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header16",
+								"text": "Type ID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer16",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_type_name",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Type Name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer1",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_uuid",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "UUID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer2",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_pk",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "PK",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer3",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_indexed",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Indexed",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer4",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_limiting_length",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header33",
+								"text": "Limiting length",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer33",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_unique",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header18",
+								"text": "Unique",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer18",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_autosequence",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header17",
+								"text": "Autosequence",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer17",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_not_null",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header19",
+								"text": "Not null",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer19",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_never_null",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header20",
+								"text": "Never null",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer20",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_text_switch_size",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header34",
+								"text": "Text switch size",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer34",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_blob_switch_size",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header35",
+								"text": "Blob switch size",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer35",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_autogenerate",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header21",
+								"text": "Autogenerate",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer21",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_hide_in_REST",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header22",
+								"text": "Hide with 4D Mobile Service",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer22",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_visible",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header23",
+								"text": "Visible",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer23",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_enterable",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header24",
+								"text": "Enterable",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer24",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_modifiable",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header26",
+								"text": "Modifiable",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer26",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_mandatory",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header25",
+								"text": "Mandatory",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer25",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_multi_line",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header27",
+								"text": "Multi line",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer27",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_compressed",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header28",
+								"text": "Compressed",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer28",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_enumeration_id",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header29",
+								"text": "ChoiceList ID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer29",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_enumeration_name",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header36",
+								"text": "ChoiceList name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer36",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_position",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header30",
+								"text": "Position",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer30",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_comment",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header31",
+								"text": "Comment",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer31",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Field_tip",
+							"width": 50,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header32",
+								"text": "Tip",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer32",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Table_comment": {
+					"type": "input",
+					"top": 257,
+					"left": 172,
+					"width": 300,
+					"height": 49,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text1": {
+					"type": "text",
+					"top": 171,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Id:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 199,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Name:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 227,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "UUID:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 316,
+					"left": 35,
+					"width": 126,
+					"height": 17,
+					"textAlign": "right",
+					"text": "SQL schema id:"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 343,
+					"left": 35,
+					"width": 126,
+					"height": 17,
+					"textAlign": "right",
+					"text": "SQL schema name:"
+				},
+				"Text8": {
+					"type": "text",
+					"top": 257,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Comment:"
+				},
+				"Text9": {
+					"type": "text",
+					"top": 391,
+					"left": 40,
+					"width": 126,
+					"height": 17,
+					"textAlign": "left",
+					"text": "Fields:"
+				},
+				"Text17": {
+					"type": "text",
+					"top": 96,
+					"left": 36,
+					"width": 125,
+					"height": 17,
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Select a table:"
+				}
+			}
+		},
+		{
+			"objects": {
+				"IndexList": {
+					"type": "dropdown",
+					"top": 94,
+					"left": 172,
+					"width": 432,
+					"height": 21,
+					"dataSource": "cbIndexList",
+					"focusable": false,
+					"method": "ObjectMethods/IndexList.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Index_unique_keys": {
+					"type": "checkbox",
+					"top": 172,
+					"left": 589,
+					"width": 200,
+					"height": 19,
+					"text": "Unique keys",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"LbIndex": {
+					"type": "listbox",
+					"top": 371,
+					"left": 40,
+					"width": 1120,
+					"height": 409,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "index_field_name",
+							"width": 253,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Field name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer5",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "index_field_uuid",
+							"width": 233,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header8",
+								"text": "Field UUID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer8",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "index_table_name",
+							"width": 251,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Table name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer7",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "index_table_uuid",
+							"width": 383,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "Table UUID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer6",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Index_kind": {
+					"type": "input",
+					"top": 174,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Index_name": {
+					"type": "input",
+					"top": 202,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Index_uuid": {
+					"type": "input",
+					"top": 230,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text10": {
+					"type": "text",
+					"top": 173,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Kind:"
+				},
+				"Text11": {
+					"type": "text",
+					"top": 201,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Name:"
+				},
+				"Text12": {
+					"type": "text",
+					"top": 229,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "UUID:"
+				},
+				"Index_type": {
+					"type": "input",
+					"top": 258,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text13": {
+					"type": "text",
+					"top": 257,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Type:"
+				},
+				"Text14": {
+					"type": "text",
+					"top": 342,
+					"left": 40,
+					"width": 126,
+					"height": 17,
+					"textAlign": "left",
+					"text": "Fields:"
+				},
+				"Text28": {
+					"type": "text",
+					"top": 96,
+					"left": 36,
+					"width": 125,
+					"height": 17,
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Select a index:"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text18": {
+					"type": "text",
+					"top": 253,
+					"left": 35,
+					"width": 126,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Integrity:"
+				},
+				"Relation_name_Nto1": {
+					"type": "input",
+					"top": 171,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Relation_name_1toN": {
+					"type": "input",
+					"top": 199,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Relation_integrity": {
+					"type": "input",
+					"top": 255,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Relation_uuid": {
+					"type": "input",
+					"top": 227,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text3": {
+					"type": "text",
+					"top": 170,
+					"left": 40,
+					"width": 121,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Name for N to 1:"
+				},
+				"Text15": {
+					"type": "text",
+					"top": 198,
+					"left": 43,
+					"width": 118,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Name for 1 to N:"
+				},
+				"Text16": {
+					"type": "text",
+					"top": 226,
+					"left": 67,
+					"width": 94,
+					"height": 17,
+					"textAlign": "right",
+					"text": "UUID:"
+				},
+				"Relation_choice_field": {
+					"type": "input",
+					"top": 284,
+					"left": 172,
+					"width": 300,
+					"height": 17,
+					"focusable": false,
+					"enterable": false,
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text19": {
+					"type": "text",
+					"top": 282,
+					"left": 35,
+					"width": 126,
+					"height": 17,
+					"textAlign": "right",
+					"text": "Choice field:"
+				},
+				"RelationList": {
+					"type": "dropdown",
+					"top": 94,
+					"left": 172,
+					"width": 432,
+					"height": 21,
+					"dataSource": "cbRelationList",
+					"focusable": false,
+					"method": "ObjectMethods/RelationList.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Relation_auto_load_Nto1": {
+					"type": "checkbox",
+					"top": 170,
+					"left": 612,
+					"width": 250,
+					"height": 19,
+					"text": "Automatic load N to 1",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Relation_auto_load_1toN": {
+					"type": "checkbox",
+					"top": 194,
+					"left": 612,
+					"width": 250,
+					"height": 19,
+					"text": "Automatic load 1 to N",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Relation_entry_wildchar": {
+					"type": "checkbox",
+					"top": 220,
+					"left": 612,
+					"width": 250,
+					"height": 19,
+					"text": "Auto Wildcard support",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Relation_entry_create": {
+					"type": "checkbox",
+					"top": 244,
+					"left": 612,
+					"width": 250,
+					"height": 19,
+					"text": "Prompt if related one does not exist",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"Relation_entry_autofill": {
+					"type": "checkbox",
+					"top": 268,
+					"left": 612,
+					"width": 250,
+					"height": 19,
+					"text": "Auto assign related value in subform",
+					"focusable": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"LbRelation": {
+					"type": "listbox",
+					"top": 397,
+					"left": 40,
+					"width": 1120,
+					"height": 381,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"headerHeight": "2em",
+					"scrollbarHorizontal": "automatic",
+					"events": [
+						"onClick",
+						"onDataChange",
+						"onSelectionChange",
+						"onHeaderClick"
+					],
+					"columns": [
+						{
+							"name": "Relation_kind",
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header9",
+								"text": "Kind",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer9",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Relation_Field_name",
+							"width": 245,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header10",
+								"text": "Field name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer10",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Relation_field_uuid",
+							"width": 211,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header11",
+								"text": "Field UUID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer11",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Relation_table_name",
+							"width": 200,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header12",
+								"text": "Table name",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer12",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						},
+						{
+							"name": "Relation_table_uuid",
+							"width": 344,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"stroke": "automatic",
+							"fill": "automatic",
+							"alternateFill": "automatic",
+							"textAlign": "automatic",
+							"verticalAlign": "automatic",
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header13",
+								"text": "Table UUID",
+								"stroke": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							},
+							"footer": {
+								"name": "Footer13",
+								"stroke": "automatic",
+								"fill": "automatic",
+								"textAlign": "automatic",
+								"verticalAlign": "automatic"
+							}
+						}
+					]
+				},
+				"Text22": {
+					"type": "text",
+					"top": 374,
+					"left": 40,
+					"width": 126,
+					"height": 17,
+					"textAlign": "left",
+					"text": "Fields:"
+				},
+				"Text29": {
+					"type": "text",
+					"top": 96,
+					"left": 36,
+					"width": 125,
+					"height": 17,
+					"textAlign": "right",
+					"textDecoration": "underline",
+					"text": "Select a relation:\r\r:"
+				}
+			}
+		},
+		{
+			"objects": {
+				"Text7": {
+					"type": "text",
+					"top": 95,
+					"left": 40,
+					"width": 1118,
+					"height": 81,
+					"sizingX": "grow",
+					"fontWeight": "bold",
+					"text": "There are also 2 methods which have been implemented in order to respond exactly like AP Get field info and AP Get table info. These commands could be imported inside your database, for the same kind of analysis. \r\r"
+				},
+				"Text20": {
+					"type": "text",
+					"top": 201,
+					"left": 634,
+					"width": 524,
+					"height": 161,
+					"text": "Get field info ( numTable ; numField ; relTable ; relFld ; props ; choiceList )\r      with:\r         numTable (Integer): Table number \t\r         numField (Integer):  Field number \t\r         relTable (Integer):    Related table \t\r         relFld (Integer):        Related field \t\r         props (Longint):       Field properties \t\r         choiceList  (String): Choice list"
+				},
+				"Text21": {
+					"type": "text",
+					"top": 201,
+					"left": 81,
+					"width": 471,
+					"height": 129,
+					"text": "Get table info  ( numTable ; invisible ; destruct ) \r      with:\r         numTable (Integer): Table number \t\r         invisible (Integer):   1, if the table is invisible 0, if the table is visible \t\r         destruct (Integer):  1, for physical deletion of the records 0, for logical deletion of the records \t\r\r "
+				},
+				"Picture8": {
+					"type": "picture",
+					"top": 194,
+					"left": 595,
+					"width": 30,
+					"height": 30,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture8.png"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 194,
+					"left": 40,
+					"width": 30,
+					"height": 30,
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture2.png"
+				},
+				"Button2": {
+					"type": "button",
+					"top": 382,
+					"left": 173,
+					"width": 235,
+					"height": 21,
+					"text": "Open \"Get table info\" method",
+					"focusable": false,
+					"method": "ObjectMethods/Button2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Button3": {
+					"type": "button",
+					"top": 382,
+					"left": 775,
+					"width": 235,
+					"height": 21,
+					"text": "Open \"Get field info\" method",
+					"focusable": false,
+					"method": "ObjectMethods/Button3.4dm",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		}
+	]
+}

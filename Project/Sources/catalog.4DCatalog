@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="HDI_GET_STRUCTURE_INFO" uuid="C923ADB95B4748EF921BF5444D49F94A" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<table name="Table_1" uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" id="1" leave_tag_on_delete="true">
+		<field name="ID" uuid="1DC7531F29684D699D9FE9686AB71009" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Champ_Alp" uuid="BC7FE443CAC344F993655D4EDE731D87" type="10" limiting_length="255" never_null="true" id="2"/>
+		<field name="Champ_txt" uuid="B210F4D7835F44C794907879DDE0F87D" type="10" never_null="true" id="3"/>
+		<field name="Champ_date" uuid="BBFE3D3823F7436BB0B862940C69F02F" type="8" never_null="true" id="4"/>
+		<field name="Champ_time" uuid="03596907402C40D9AF22EF8363220144" type="9" never_null="true" id="5"/>
+		<field name="Champ_bool" uuid="3E5699C9AFB749A6B297DECA9E2F883F" type="1" never_null="true" id="6"/>
+		<field name="Champ_int" uuid="1C487166114E4A6F9C0E0917834ED438" type="3" never_null="true" id="7">
+			<field_extra>
+				<tip>Champ_int Tip</tip>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Champ_int comment}]]></comment>
+				<comment format="text">Champ_int comment</comment>
+			</field_extra>
+		</field>
+		<field name="Champ_longint" uuid="E362E32F4A26490DBCADD296E4ACFE49" type="4" never_null="true" id="8"/>
+		<field name="Champ_int64bit" uuid="2897347D17964559A2D4B2BB61081EE7" type="5" never_null="true" id="9"/>
+		<field name="Champ_real" uuid="C125D646570148A0BA858380EFA104DB" type="6" never_null="true" id="10"/>
+		<field name="Champ_float" uuid="93B3EDDF01084EDF92B666DF684ABAD8" type="6" never_null="true" id="11"/>
+		<field name="Champ_blob" uuid="DB5A09D1E2E44C878AEB5121A002E48A" type="18" blob_switch_size="1048" never_null="true" id="12"/>
+		<field name="Champ_pict" uuid="A20EE614E5394D9BA2F64538FA1C0C16" type="12" never_null="true" id="13" outside_blob="true"/>
+		<field name="Champ_obj" uuid="FB73FAA372804EC69C1ED95DC3F92874" type="21" blob_switch_size="2147483647" never_null="true" id="14"/>
+		<primary_key field_name="ID" field_uuid="1DC7531F29684D699D9FE9686AB71009"/>
+		<table_extra trigger_insert="true" input_form="Entrée" output_form="Sortie">
+			<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Comments on my Table_1}]]></comment>
+			<comment format="text">Comments on my Table_1</comment>
+		</table_extra>
+	</table>
+	<table name="Table_2" uuid="6E23C70A973743B28809D9C3F3CC9060" id="2">
+		<field name="ID" uuid="B71D191358954A5783210E2447CD1A27" type="4" unique="true" autosequence="true" not_null="true" id="1">
+			<field_extra visible="false"/>
+		</field>
+		<field name="T2Champ_Alp" uuid="EEBB4E0A272F46C8906BD3634C312253" type="10" limiting_length="10" unique="true" never_null="true" id="2"/>
+		<field name="T2Champ_txt" uuid="CC07AAAE55A04A12805EF277A362A556" type="10" not_null="true" never_null="true" id="3"/>
+		<field name="T2Champ_date" uuid="E29E9C3C460341098111420E50960507" type="8" never_null="true" id="4">
+			<field_extra>
+				<tip>Date</tip>
+			</field_extra>
+		</field>
+		<field name="T2Champ_time" uuid="45FEC3D0C3354EAAB1EF2A5390C01261" type="9" never_null="true" id="5">
+			<field_extra enterable="false">
+				<tip>Time</tip>
+			</field_extra>
+		</field>
+		<field name="T2Champ_bool" uuid="21FD211FA5CD441DAF3E056F6A116B0D" type="1" never_null="true" id="6"/>
+		<field name="T2Champ_int" uuid="96CE9FD2A6FF401D902C0F1EE663ED51" type="3" never_null="true" id="7">
+			<field_extra mandatory="true"/>
+		</field>
+		<field name="T2Champ_longint" uuid="2CF3397CC8B64C8C89A497CC12067435" type="4" never_null="true" id="8">
+			<field_extra enterable="false">
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Purple field color}]]></comment>
+				<comment format="text">Purple field color</comment>
+			</field_extra>
+		</field>
+		<field name="T2Champ_int64bit" uuid="379AAF2196AF483DBFE62A3216EA8C7C" type="5" never_null="true" id="9">
+			<field_extra modifiable="false"/>
+		</field>
+		<field name="T2Champ_real" uuid="64006C4096FF4FD0868CC9C676F3D5D1" type="6" never_null="true" id="10">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Blue field color}]]></comment>
+				<comment format="text">Blue field color</comment>
+			</field_extra>
+		</field>
+		<field name="T2Champ_float" uuid="4B71EA9FD0414197BC332D112666082D" type="6" never_null="true" id="11">
+			<field_extra>
+				<tip>float Tip</tip>
+			</field_extra>
+		</field>
+		<field name="T2Champ_blob" uuid="C29D452459DC4E39919129741CDBC98B" type="18" never_null="true" id="12">
+			<field_extra>
+				<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone BLOB comment}]]></comment>
+				<comment format="text">BLOB comment</comment>
+			</field_extra>
+		</field>
+		<field name="T2Champ_pict" uuid="B67A49AC99BB4D6AA08C3152BEFA12AF" type="12" never_null="true" id="13"/>
+		<field name="T2Champ_obj" uuid="4A0A061C079E4E4C921661FBC674FCDD" type="21" never_null="true" id="14"/>
+		<field name="iT2ndUniqMandChoiceMod" uuid="A5031807F0AF4CA4BB98B6C71EDE48CB" type="10" limiting_length="255" unique="true" never_null="true" id="15">
+			<field_extra mandatory="true" enumeration_id="1"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="B71D191358954A5783210E2447CD1A27"/>
+		<table_extra visible="false" input_form="Entrée" output_form="Sortie">
+			<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Comments on my Table_2}]]></comment>
+			<comment format="text">Comments on my Table_2</comment>
+		</table_extra>
+	</table>
+	<table name="Table_3" uuid="0DF73BE30E684DAAA8A347612468801F" id="3" prevent_journaling="true">
+		<field name="ID" uuid="BABFA5A7EEB3480DA0814DB320E007E9" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_Unique" uuid="17EA2E5653524BCEB74BF3D0CCFFEAE3" type="10" limiting_length="255" never_null="true" id="2">
+			<field_extra modifiable="false">
+				<tip>Field_Unique</tip>
+			</field_extra>
+		</field>
+		<field name="Field_Mandatory" uuid="B26BB43AB531467B98051F734591BBC3" type="10" limiting_length="255" never_null="true" id="3">
+			<field_extra mandatory="true"/>
+		</field>
+		<field name="Field_DisplayOnly" uuid="8E8EA2870009410299FD154D13A383CE" type="10" limiting_length="255" never_null="true" id="4">
+			<field_extra enterable="false"/>
+		</field>
+		<field name="Field_cantModify" uuid="C07E4B744D904806B8FAA3783A74F19E" type="10" limiting_length="255" never_null="true" id="5">
+			<field_extra modifiable="false"/>
+		</field>
+		<field name="Field_6" uuid="A27EDEE15EE44C71B085FEF1F47754A7" type="10" limiting_length="255" never_null="true" id="6">
+			<field_extra enumeration_id="1" enterable="false"/>
+		</field>
+		<field name="Field_7" uuid="B3B80A83959B4B2FAE2144166D02AC6D" type="10" limiting_length="255" unique="true" never_null="true" id="7" styled_text="true">
+			<field_extra visible="false" mandatory="true"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="BABFA5A7EEB3480DA0814DB320E007E9"/>
+		<primary_key field_name="Field_Unique" field_uuid="17EA2E5653524BCEB74BF3D0CCFFEAE3"/>
+		<table_extra input_form="" output_form=""/>
+	</table>
+	<table name="Table_4" uuid="3C6871893A73499B96A774749576E02E" id="4">
+		<field name="ID" uuid="D02E5170D2DE4D2A9A1D697089CC715B" type="4" unique="true" autosequence="true" not_null="true" id="1"/>
+		<field name="Field_2" uuid="494A25B592FE4B9BABEB9A96649D50C5" type="10" limiting_length="255" id="2" hide_in_REST="true">
+			<field_extra modifiable="false" enterable="false"/>
+		</field>
+		<primary_key field_name="ID" field_uuid="D02E5170D2DE4D2A9A1D697089CC715B"/>
+		<table_extra input_form="" output_form="">
+			<comment format="rtf"><![CDATA[{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 .SFNSText-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
+
+\f0\fs22 \cf2 \ulnone Comments on Table 4}]]></comment>
+			<comment format="text">Comments on Table 4</comment>
+		</table_extra>
+	</table>
+	<relation uuid="370180DABD8545D690CDC79E15D31215" name_Nto1="Link_1" name_1toN="Link_1_return" auto_load_Nto1="true" state="1">
+		<related_field kind="source">
+			<field_ref uuid="1DC7531F29684D699D9FE9686AB71009" name="ID">
+				<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B71D191358954A5783210E2447CD1A27" name="ID">
+				<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="84E19D84A0184E7FBA2C5C9CDB5689FF" name_Nto1="Link_2" name_1toN="Link_2_return" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="EEBB4E0A272F46C8906BD3634C312253" name="T2Champ_Alp">
+				<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="BC7FE443CAC344F993655D4EDE731D87" name="Champ_Alp">
+				<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="357A968E17B9491FBABC66A5F4856E5A" name_Nto1="Link_3" name_1toN="Link_3_return" state="1" integrity="reject">
+		<related_field kind="source">
+			<field_ref uuid="CC07AAAE55A04A12805EF277A362A556" name="T2Champ_txt">
+				<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="B210F4D7835F44C794907879DDE0F87D" name="Champ_txt">
+				<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="3733BE5AF4D74ACB8691FFC997A80050" name_Nto1="Link_4" name_1toN="Link_4_return" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="BBFE3D3823F7436BB0B862940C69F02F" name="Champ_date">
+				<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="E29E9C3C460341098111420E50960507" name="T2Champ_date">
+				<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="true" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="3DEF1E7CDB4B4C9A8ED618CA048600A5" name_Nto1="Link_12" name_1toN="Link_12_return" auto_load_Nto1="true" auto_load_1toN="true" state="1" integrity="delete">
+		<related_field kind="source">
+			<field_ref uuid="A27EDEE15EE44C71B085FEF1F47754A7" name="Field_6">
+				<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="494A25B592FE4B9BABEB9A96649D50C5" name="Field_2">
+				<table_ref uuid="3C6871893A73499B96A774749576E02E" name="Table_4"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="false" entry_create="false" choice_field="0" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="false" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<relation uuid="C6925AC053CE449799B67A4B6F2925EA" name_Nto1="Link_6" name_1toN="Link_6_return" state="1">
+		<related_field kind="source">
+			<field_ref uuid="17EA2E5653524BCEB74BF3D0CCFFEAE3" name="Field_Unique">
+				<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+			</field_ref>
+		</related_field>
+		<related_field kind="destination">
+			<field_ref uuid="EEBB4E0A272F46C8906BD3634C312253" name="T2Champ_Alp">
+				<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+			</field_ref>
+		</related_field>
+		<relation_extra entry_wildchar="true" entry_create="false" choice_field="2" entry_autofill="false">
+			<editor_relation_info via_point_x="-1" via_point_y="-1" prefers_left="true" smartlink="true"/>
+		</relation_extra>
+	</relation>
+	<index kind="regular" unique_keys="true" name="Index of [Table_4]ID" uuid="0EF2D43061634149B2E8339DF439D715" type="7">
+		<field_ref uuid="D02E5170D2DE4D2A9A1D697089CC715B" name="ID">
+			<table_ref uuid="3C6871893A73499B96A774749576E02E" name="Table_4"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="235E80E1FAF445078D729347022BF5DB" type="7">
+		<field_ref uuid="E29E9C3C460341098111420E50960507" name="T2Champ_date">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="252B739F13A64134BCF7C1250712C111" type="7">
+		<field_ref uuid="B71D191358954A5783210E2447CD1A27" name="ID">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="B-Tree Index" uuid="30DB8C1E565F4583B5BBF2E1EE7EAE27" type="1">
+		<field_ref uuid="45FEC3D0C3354EAAB1EF2A5390C01261" name="T2Champ_time">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="3EFFA525B8C949C9AA5DDEA6972275AD" type="7">
+		<field_ref uuid="BABFA5A7EEB3480DA0814DB320E007E9" name="ID">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" name="Index Name" uuid="42E921F874EF44B4A2A08AD82CA53D91" type="7">
+		<field_ref uuid="BC7FE443CAC344F993655D4EDE731D87" name="Champ_Alp">
+			<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="4CACD9D55B564BDAA6348BE2C8A78E56" type="7">
+		<field_ref uuid="B210F4D7835F44C794907879DDE0F87D" name="Champ_txt">
+			<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="52ED55B6B31E4F4DBB8686B257AAA900" type="1">
+		<field_ref uuid="B3B80A83959B4B2FAE2144166D02AC6D" name="Field_7">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="557B73870276457F9B60E9DBE15B0FAC" type="1">
+		<field_ref uuid="EEBB4E0A272F46C8906BD3634C312253" name="T2Champ_Alp">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="7260EA8E18A1477A90F068F70754C384" type="7">
+		<field_ref uuid="1DC7531F29684D699D9FE9686AB71009" name="ID">
+			<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="AA0E715B16124942A3D2B8C2E69D1420" type="7">
+		<field_ref uuid="C07E4B744D904806B8FAA3783A74F19E" name="Field_cantModify">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="B5F5A62FB8364B4D8E4A53C00BA4CFEF" type="3">
+		<field_ref uuid="21FD211FA5CD441DAF3E056F6A116B0D" name="T2Champ_bool">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="BFE31D61B6A74D76A1E5B9D9AE5A77C8" type="3">
+		<field_ref uuid="4A0A061C079E4E4C921661FBC674FCDD" name="T2Champ_obj">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="keywords" name="Keyword Index" uuid="CE679114846A4370B8663E6F5384AE37" type="3">
+		<field_ref uuid="B210F4D7835F44C794907879DDE0F87D" name="Champ_txt">
+			<table_ref uuid="0F8DD65FCF8E4CBB882B2FF15C9C8A12" name="Table_1"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="D35D73A3903D4E24B9C88D43E2BA7B52" type="7">
+		<field_ref uuid="B26BB43AB531467B98051F734591BBC3" name="Field_Mandatory">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="DE5CBC5D3D8B4859904CD9E8E1DA6FF7" type="7">
+		<field_ref uuid="17EA2E5653524BCEB74BF3D0CCFFEAE3" name="Field_Unique">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" name="B-Tree composite" uuid="EC32688A0D444AEAB55FB33032C0BE73" type="1">
+		<field_ref uuid="BABFA5A7EEB3480DA0814DB320E007E9" name="ID">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+		<field_ref uuid="17EA2E5653524BCEB74BF3D0CCFFEAE3" name="Field_Unique">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<index kind="regular" unique_keys="true" uuid="F3406D6C87054F749E1088DAE0512BCE" type="7">
+		<field_ref uuid="A5031807F0AF4CA4BB98B6C71EDE48CB" name="iT2ndUniqMandChoiceMod">
+			<table_ref uuid="6E23C70A973743B28809D9C3F3CC9060" name="Table_2"/>
+		</field_ref>
+	</index>
+	<index kind="regular" uuid="FCAD0FCD6EC94C10B5A77BECDD187140" type="7">
+		<field_ref uuid="8E8EA2870009410299FD154D13A383CE" name="Field_DisplayOnly">
+			<table_ref uuid="0DF73BE30E684DAAA8A347612468801F" name="Table_3"/>
+		</field_ref>
+	</index>
+	<base_extra package_name="HDI_GET_STRUCTURE_INFO" structure_file_name="TOOL_GET_TABLE_AND_FIELD_INFO" data_file_path=":TOOL_GET_TABLE_AND_FIELD_INFO.4DD">
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

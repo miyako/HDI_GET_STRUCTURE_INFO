@@ -1,0 +1,63 @@
+{
+	"Dossier par défaut": {
+		"groups": [
+			"Formulaires par défaut",
+			"HDI form",
+			"Méthodes projet par défaut",
+			"Tables par défaut"
+		]
+	},
+	"Formulaires par défaut": {
+		"forms": [
+			"[Table_1]Entrée",
+			"[Table_1]Sortie",
+			"[Table_2]Entrée",
+			"[Table_2]Sortie"
+		]
+	},
+	"HDI form": {
+		"methods": [
+			"exportStructure"
+		],
+		"forms": [
+			"HDI"
+		]
+	},
+	"Interface": {
+		"methods": [
+			"displayField",
+			"displayIndex",
+			"displayRelation",
+			"displayTableInfo",
+			"selectIndex",
+			"selectRelation",
+			"selectTable"
+		],
+		"forms": [
+			"HDI2"
+		]
+	},
+	"Méthodes projet par défaut": {
+		"methods": [
+			"00_Start",
+			"exportMethod",
+			"m_Quit"
+		]
+	},
+	"Replace 4D Pack Command": {
+		"methods": [
+			"errHandler",
+			"Get field info",
+			"Get table info"
+		]
+	},
+	"Tables par défaut": {
+		"tables": [
+			"Table_1",
+			"Table_2",
+			"Table_3",
+			"Table_4"
+		]
+	},
+	"trash": {}
+}
