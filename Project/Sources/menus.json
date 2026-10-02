@@ -110,7 +110,7 @@
 			"items": [
 				{
 					"title": ":xliff:CommonMenuItemDesign",
-					"action": "ReturnToDesignMode"
+					"action": "design"
 				}
 			]
 		},
